@@ -161,7 +161,7 @@ window.onload = function() {
     // The page has loaded, start the game
     //let gameWorld = new GameWorld('canvas', window.innerHeight%10, window.innerWidth%10);
     start = true;
-}, 1);
+}, 10000);
 
 }
 
