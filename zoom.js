@@ -13,8 +13,9 @@ document.getElementById("img-fit").style.height = window.innerHeight +'px';
 document.getElementById("my-img").style.height = window.innerHeight +'px';
 
 let diff = window.innerWidth - window.innerHeight;
-if(diff > 0){
-    document.getElementById("bbig").style.scale = 9+(diff/100);
+
+if(window.innerWidth > 600){
+    document.getElementById("bbig").style.scale = 1+(diff/2500);
 }
 
 
@@ -43,8 +44,8 @@ class Cell
 }
 
 
-    var numColumns = 75;
-    var numRows = 100;
+    var numColumns = Math.floor(Math.max(600, window.innerWidth)/4);
+    var numRows = Math.floor(Math.max(600, window.innerHeight)/4);
     var start = false;
 
 

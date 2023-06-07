@@ -3,7 +3,6 @@
 
 <head>
     <title>Yaswanth Pulavarthi</title>
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 
     <meta name="author" content="Yaswanth Pulavarthi">
     <link rel="stylesheet" href="styles.css">
@@ -25,6 +24,12 @@
 
     }
 
+    .zoom{
+        display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    }
+
     ::-webkit-scrollbar {
          display: none;
          scrollbar-width: none;
@@ -38,9 +43,9 @@
     }
 
     .center {
-        width: 100%;
         object-fit: contain;
-        position: absolute;
+        display: block;
+        margin: auto;
       
     }
 
@@ -110,8 +115,9 @@
 }
     .color_chg-btn {
         float: right;
-        padding: 8%;
+        padding: 6%;
     }
+
 
     .color_chg-btn:hover {
   transform: rotate(360deg);
@@ -167,11 +173,7 @@
 
 <div style="display:none;" id="myDiv">
 
-    <div class="cursor__ball" id = "bbig" style="top:50%;left: 30%;scale: 9;">
-        <svg height="40" width="40">
-            <circle cx="20" cy="20" r="20" stroke-width="0"></circle>
-        </svg>
-    </div>
+
 
     <div class="cursor">
         <div class="cursor__ball cursor__ball--big ">
@@ -233,6 +235,11 @@
         
         <div class = "zoom" >
             <img id = "img-fit" class="center" src="me2.png" > 
+            <div class="cursor__ball" id = "bbig" style="top:34%;float: right;padding: 0 0 0 8%;">
+                <svg height="360" width="360">
+                    <circle cx="180" cy="180" r="180" stroke-width="0"></circle>
+                </svg>
+            </div>
             <div class="color_chg-btn">
                 <button id = "color_change" data-cursor="sizeLink" class="magnetic-btn" data-scroll-position="bottom" style="transform: translate3d(0px, 0px, 0px);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="65" viewBox="0 0 65 65"><path d="M49.462 1V35.055H45.679V7.451L6.651 46.4 3.976 43.726 43 4.78H15.321V1z" fill="black" stroke="black"></path></svg>
