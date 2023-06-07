@@ -9,13 +9,14 @@ window.onresize = function(){ location.reload(); }
 //const zoomElement = document.querySelector(".center");
 //document.getElementById("center").style.maxWidth = window.innerWidth;
 //document.getElementById("hei").style.height = (2*window.innerHeight)+'px';
-document.getElementById("img-fit").style.height = window.innerHeight +'px';
-document.getElementById("my-img").style.height = window.innerHeight +'px';
+document.querySelector(".zoom").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("img-fit").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("my-img").style.height = Math.max(600, window.innerHeight) +'px';
 
 let diff = window.innerWidth - window.innerHeight;
 
 if(window.innerWidth > 600){
-    document.getElementById("bbig").style.scale = 1+(diff/2500);
+    document.getElementById("bbig").style.scale = 1+(diff/1200);
 }
 
 

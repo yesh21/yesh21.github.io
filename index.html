@@ -19,7 +19,7 @@
     body, canvas, html, .zoom {
   scroll-behavior: smooth;
   min-width: 600px;
-  min-height: 900px;
+  min-height: 600px;
   
 
     }
@@ -177,9 +177,14 @@
 
     <div class="cursor">
         <div class="cursor__ball cursor__ball--big ">
-            <svg height="30" width="30">
-                <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
-            </svg>
+            <svg class="svg-circleplus" viewBox="0 0 100 100" style="
+            height: 40px;
+            stroke: black;
+        ">
+          <circle cx="50" cy="50" r="45" fill="none" stroke-width="1"></circle>
+          <line x1="30" y1="50" x2="70" y2="50" stroke-width="1"></line>
+          <line x1="50" y1="30" x2="50" y2="70" stroke-width="1"></line>
+        </svg>
         </div>
     </div>
     
@@ -211,31 +216,34 @@
             </div>
 
         </div>
-
-        <h2 class="section-title "  style = "top:52%; z-index: -1;overflow-x: inherit;">
+        <div style = "position: absolute; top: 25%;       top: 36%;
+        display: flex;
+        z-index: -1; padding: 100px 0 0 0;
+        flex-flow: column wrap;">
+        <h2 class="section-title ">
             <span class="paralax-title">
             Coding is Art.
         </span>
         </h2>
-        <h2 class="section-title on-dark"  style = "top:40%; z-index: -1; overflow-x: inherit;">
+        <h2 class="section-title on-dark">
             <span class="paralax-title">
             Coding is Life
         </span>
         </h2>
-        <h2 class="section-title on-dark"  style = "top:64%; z-index: -1;overflow-x: inherit;">
+        <h2 class="section-title on-dark">
             <span class="paralax-title">
             Coding is Love
         </span>
         </h2>
-        <h2 class="section-title"  style = "top:76%; z-index: -1;overflow-x: inherit;">
+        <h2 class="section-title">
             <span class="paralax-title">
             Coding is Fire
         </span>
         </h2>
-        
+     </div>
         <div class = "zoom" >
             <img id = "img-fit" class="center" src="me2.png" > 
-            <div class="cursor__ball" id = "bbig" style="top:34%;float: right;padding: 0 0 0 8%;">
+            <div class="cursor__ball" id = "bbig" style="top:30%;float: right;padding: 50px 0 0 10%;">
                 <svg height="360" width="360">
                     <circle cx="180" cy="180" r="180" stroke-width="0"></circle>
                 </svg>
@@ -260,19 +268,19 @@
         </div>
 
         <div id = "my-img" class = "zoom" >
-            <canvas id="canvas" style="width:100%; position:absolute;top:100%;height: 100%;">
+            <div >
+                <p class="footlinks" Style = "float: left;">&nbspConvey's Game</p>
+                <a id="start_game">
+                    <img id="play_button"  src="pause.png" style="border-radius: 50%;width: 50px;">
+                </a>
+                <a id="reset_game">
+                    <img  src="refresh-arrow.png" style="border-radius: 50%;width: 50px;">
+                </a>
+                
+            </div>
+            <canvas id="canvas">
             Your browser does not support the HTML5 canvas tag.
             </canvas>
-                <div style="background: black; top:100%; position: absolute;">
-                    <p class="footlinks" Style = "float: left;">&nbspConvey's Game</p>
-                    <a id="start_game">
-                        <img id="play_button"  src="pause.png" style="border-radius: 50%;width: 50px;">
-                    </a>
-                    <a id="reset_game">
-                        <img  src="refresh-arrow.png" style="border-radius: 50%;width: 50px;">
-                    </a>
-                    
-                </div>
 
         </div>
 
@@ -344,7 +352,7 @@
     // Hover an element
     function onMouseHover() {
     TweenMax.to($bigBall, .3, {
-        scale: 10
+        scale: 7
     });
     }
 
