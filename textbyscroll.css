@@ -23,12 +23,8 @@ body {
 
 .section-title {
     margin: 0;
-    font-size: 64px;
+    font-size: 61px;
     width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: -30%;
     transform: translateY(-50%);
     z-index: 1;
     white-space: nowrap;

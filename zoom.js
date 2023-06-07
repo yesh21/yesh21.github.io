@@ -12,6 +12,8 @@ window.onresize = function(){ location.reload(); }
 document.querySelector(".zoom").style.height = Math.max(600, window.innerHeight) +'px';
 document.getElementById("img-fit").style.height = Math.max(600, window.innerHeight) +'px';
 document.getElementById("my-img").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("canvas").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("canvas").style.width = Math.max(600, window.innerWidth) +'px';
 
 let diff = window.innerWidth - window.innerHeight;
 
@@ -159,7 +161,7 @@ window.onload = function() {
     // The page has loaded, start the game
     //let gameWorld = new GameWorld('canvas', window.innerHeight%10, window.innerWidth%10);
     start = true;
-}, 10000);
+}, 1);
 
 }
 
