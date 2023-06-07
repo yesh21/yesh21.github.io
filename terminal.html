@@ -1,0 +1,86 @@
+<style>
+    .terminal {
+        background: black;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+
+    }
+    .command {
+        color: white;
+        display: block;
+    width: 0px;
+    margin: 0;
+        font-size:1.2rem;
+        overflow: hidden;
+        font-family: monospace;
+        white-space: nowrap;
+        overflow: hidden;
+        animation-name: writeText;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+        
+    }
+    .cursorDash {
+        animation: blink 1s 3.5s infinite;
+    }
+
+
+    @keyframes writeText {
+  from {
+    width: 0;
+  }
+  to {
+    width: 600px;
+  }
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+</style>
+<body>
+
+    <div class = "preloader">
+        <div class = "terminal">
+            <p class="command"><strong>&nbspTerminal</strong>-Yaswanth Pulavarthi</p>
+            <p class="command" style="animation-delay: 1000ms;"><strong>&nbspPS C:\Users\Yaswanth Pulavarthi></strong>$  help My_Website</p>
+            <p class="command" style="animation-delay: 2000ms;"><strong>&nbspDESCRIPTION</strong><br>&nbsp   Ready to see the awesomess!
+            <br>
+            <br>&nbsp&nbsp --Commands--
+            <br>&nbsp&nbsp&nbsp&nbsp&nbsp  load          : loads the program
+            <br>&nbsp&nbsp&nbsp&nbsp&nbsp  run           : runs the website.
+            <br>
+            
+            <br>
+            </p>
+            <p class="command" style="animation-delay: 3500ms;"><strong>&nbspPS C:\Users\Yaswanth Pulavarthi></strong>$load My website &&<br> run()<span class="cursorDash"><br>                                     _   _       
+                <br>
+                 _                 _ _             <br>
+                | | ___   __ _  __| (_)_ __   __ _ <br>
+                | |/ _ \ / _` |/ _` | | '_ \ / _` |<br>
+                | | (_) | (_| | (_| | | | | | (_| |<br>
+                |_|\___/ \__,_|\__,_|_|_| |_|\__, |<br>
+                ..............................|___/ </span></p>
+            <p class="command" style="animation-delay: 4500ms;">&nbsp Loading CSS...<br></p>
+            <p class="command" style="animation-delay: 5000ms;">&nbsp Loading images...</p>
+            <p class="command"style="animation-delay: 5500ms;">&nbsp Loading assets...</span><span class="cursorDash">_</span></p>
+            <p class="command" style="animation-delay: 5500ms;animation-duration: 4000ms;"><strong>&nbsp [#################################################]</strong></p>
+
+        </div>
+
+    </div>
+</body>
