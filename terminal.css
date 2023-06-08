@@ -9,12 +9,12 @@
     color: white;
     display: block;
     width: 0px;
+    max-width: 100%;
     margin: 0;
-    font-size:1.2rem;
+    font-size:3.2vmin;
     overflow: hidden;
     font-family: monospace;
     white-space: nowrap;
-    overflow: hidden;
     animation-name: writeText;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
@@ -30,7 +30,7 @@ from {
 width: 0;
 }
 to {
-width: 600px;
+width: fit-content;
 }
 }
 

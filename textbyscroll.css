@@ -23,7 +23,7 @@ body {
 
 .section-title {
     margin: 0;
-    font-size: 61px;
+    font-size: max(59px, 12.2vmin);;
     width: 100%;
     transform: translateY(-50%);
     z-index: 1;
