@@ -11,14 +11,6 @@ $(document).ready(function(){
 //document.getElementById("hei").style.height = (2*window.innerHeight)+'px';
 
 
-let diff = window.innerWidth - window.innerHeight;
-
-if(window.innerWidth > 600){
-    document.getElementById("bbig").style.scale = 1+(diff/1200);
-} else {
-    document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
-}
-
 
 class Cell
 {
@@ -45,14 +37,14 @@ class Cell
 }
 
 
-    var numColumns = Math.floor(Math.max(600, window.innerWidth)/4);
-    var numRows = Math.floor(Math.max(600, window.innerHeight)/4);
     var start = false;
 
 
         canvas = document.getElementById('canvas');
         context = canvas.getContext('2d');
         gameObjects = [];
+        var numColumns = Math.floor(canvas.width/4);
+        var numRows = Math.floor(canvas.height/4);
 
         createGrid();
 
@@ -168,6 +160,14 @@ document.getElementById("my-img").style.height = Math.max(600, window.innerHeigh
 document.getElementById("canvas").style.height = Math.max(600, window.innerHeight) +'px';
 document.getElementById("canvas").style.width = Math.max(600, window.innerWidth) +'px';
 
+let diff = window.innerWidth - window.innerHeight;
+
+if(window.innerWidth > 600){
+    //document.getElementById("bbig").style.scale = 1+(diff/1200);
+} else {
+    document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
+}
+
 }
 
 window.onresize = function() {
@@ -177,6 +177,14 @@ document.getElementById("img-fit").style.width = Math.max(600, window.innerWidth
 document.getElementById("my-img").style.height = Math.max(600, window.innerHeight) +'px';
 document.getElementById("canvas").style.height = Math.max(600, window.innerHeight) +'px';
 document.getElementById("canvas").style.width = Math.max(600, window.innerWidth) +'px';
+
+let diff = window.innerWidth - window.innerHeight;
+
+if(window.innerWidth > 600){
+    //document.getElementById("bbig").style.scale = 1+(diff/1200);
+} else {
+    document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
+}
 }
 
 
