@@ -3,6 +3,7 @@ $(document).ready(function(){
   $(this).scrollTop(0);
 });
 
+//window.onresize = function(){ location.reload(); }
 
 
 //const zoomElement = document.querySelector(".center");
@@ -10,6 +11,7 @@ $(document).ready(function(){
 //document.getElementById("hei").style.height = (2*window.innerHeight)+'px';
 document.querySelector(".zoom").style.height = Math.max(600, window.innerHeight) +'px';
 document.getElementById("img-fit").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("img-fit").style.width = Math.max(600, window.innerWidth) +'px';
 document.getElementById("my-img").style.height = Math.max(600, window.innerHeight) +'px';
 document.getElementById("canvas").style.height = Math.max(600, window.innerHeight) +'px';
 document.getElementById("canvas").style.width = Math.max(600, window.innerWidth) +'px';
@@ -18,6 +20,8 @@ let diff = window.innerWidth - window.innerHeight;
 
 if(window.innerWidth > 600){
     document.getElementById("bbig").style.scale = 1+(diff/1200);
+} else {
+    document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
 }
 
 
@@ -160,7 +164,7 @@ window.onload = function() {
     // The page has loaded, start the game
     //let gameWorld = new GameWorld('canvas', window.innerHeight%10, window.innerWidth%10);
     start = true;
-}, 10000);
+}, 1);
 
 }
 
