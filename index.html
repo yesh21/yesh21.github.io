@@ -332,12 +332,15 @@
     const $hoverables = document.querySelectorAll('body');
 
     // Listeners
-    document.body.addEventListener('mousemove', onMouseMove);
+    //document.body.addEventListener('mousemove', onMouseMove);
+    document.body.addEventListener('ontouchmove', onMouseMove);
     //document.body.addEventListener('mousemove', onMouseHover);
     for (let i = 0; i < $hoverables.length; i++) {
     //if (window.CP.shouldStopExecution(0)) break;
     $hoverables[i].addEventListener('mouseenter', onMouseHover);
     $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+    $hoverables[i].addEventListener('ontouchstart', onMouseHover);
+    $hoverables[i].addEventListener('ontouchend', onMouseHoverOut);
     }
 
     // Move the cursor

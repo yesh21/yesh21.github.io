@@ -9,12 +9,7 @@ $(document).ready(function(){
 //const zoomElement = document.querySelector(".center");
 //document.getElementById("center").style.maxWidth = window.innerWidth;
 //document.getElementById("hei").style.height = (2*window.innerHeight)+'px';
-document.querySelector(".zoom").style.height = Math.max(600, window.innerHeight) +'px';
-document.getElementById("img-fit").style.height = Math.max(600, window.innerHeight) +'px';
-document.getElementById("img-fit").style.width = Math.max(600, window.innerWidth) +'px';
-document.getElementById("my-img").style.height = Math.max(600, window.innerHeight) +'px';
-document.getElementById("canvas").style.height = Math.max(600, window.innerHeight) +'px';
-document.getElementById("canvas").style.width = Math.max(600, window.innerWidth) +'px';
+
 
 let diff = window.innerWidth - window.innerHeight;
 
@@ -166,6 +161,22 @@ window.onload = function() {
     start = true;
 }, 10000);
 
+document.querySelector(".zoom").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("img-fit").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("img-fit").style.width = Math.max(600, window.innerWidth) +'px';
+document.getElementById("my-img").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("canvas").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("canvas").style.width = Math.max(600, window.innerWidth) +'px';
+
+}
+
+window.onresize = function() {
+document.querySelector(".zoom").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("img-fit").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("img-fit").style.width = Math.max(600, window.innerWidth) +'px';
+document.getElementById("my-img").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("canvas").style.height = Math.max(600, window.innerHeight) +'px';
+document.getElementById("canvas").style.width = Math.max(600, window.innerWidth) +'px';
 }
 
 
