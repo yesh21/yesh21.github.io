@@ -241,10 +241,10 @@
         </span>
         </h2>
      </div>
-     <div class="cursor__ball" id = "bbig" style="top:30%;float: right;padding: 50px 0 0 10%;">
-                <svg height="360" width="360">
-                    <circle cx="180" cy="180" r="180" stroke-width="0"></circle>
-                </svg>
+     <div class="cursor__ball" id = "bbig" style="top:30%;float: right;padding: 0 0 0 16%;">
+        <svg height="80vmin" width="80vmin">
+            <circle cx="40vmin" cy="40vmin" r="40vmin" stroke-width="0"></circle>
+        </svg>
             </div>
             <div class="color_chg-btn">
                 <button id = "color_change" data-cursor="sizeLink" class="magnetic-btn" data-scroll-position="bottom" style="transform: translate3d(0px, 0px, 0px);">
@@ -333,13 +333,13 @@
 
     // Listeners
     document.body.addEventListener('mousemove', onMouseMove);
-    document.body.addEventListener('touchmove', onMouseMove);
+    //document.body.addEventListener('touchmove', onMouseMove);
     //document.body.addEventListener('mousemove', onMouseHover);
     for (let i = 0; i < $hoverables.length; i++) {
     //if (window.CP.shouldStopExecution(0)) break;
     $hoverables[i].addEventListener('mouseenter', onMouseHover);
     $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-    $hoverables[i].addEventListener('touchstart', onMouseHover);
+    //$hoverables[i].addEventListener('touchstart', onMouseHover);
     //$hoverables[i].addEventListener('touchend', onMouseHoverOut);
     }
 
