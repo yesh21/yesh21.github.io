@@ -97,7 +97,7 @@ footer {
 
 .overlay a {
     padding: 15px;
-    font-size: 36px;
+    font-size: 15vw;
     display: block;
     transition: all 0.3s ease 0s;
 }
@@ -109,9 +109,8 @@ footer {
 
 .overlay .close {
     position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+    right: 0;
+    font-size: 15vw;
     color: #edf0f1;
     cursor: pointer;
 }
@@ -128,6 +127,16 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta, footer{
+        display: none;
+    }
+    .menu {
+        display: initial;
+    }
+}
+
+@media (pointer:none), (pointer:coarse){
     .nav__links,
     .cta, footer{
         display: none;

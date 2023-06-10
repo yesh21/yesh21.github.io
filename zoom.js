@@ -164,7 +164,9 @@ let diff = window.innerWidth - window.innerHeight;
 
 if(window.innerWidth > 600){
     //document.getElementById("bbig").style.scale = 1+(diff/1200);
+    document.body.style.overflowX = 'hidden';
 } else {
+    document.body.style.overflowX = 'visible';
     document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
 }
 
@@ -182,7 +184,9 @@ let diff = window.innerWidth - window.innerHeight;
 
 if(window.innerWidth > 600){
     //document.getElementById("bbig").style.scale = 1+(diff/1200);
+    document.body.style.overflowX = 'hidden';
 } else {
+    document.body.style.overflowX = 'visible';
     document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
 }
 }
