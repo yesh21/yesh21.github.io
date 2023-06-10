@@ -2,8 +2,8 @@
 <html>
 
 <head>
+    <meta name="viewport" content="user-scalable = no">
     <title>Yaswanth Pulavarthi</title>
-
     <meta name="author" content="Yaswanth Pulavarthi">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
@@ -310,6 +310,7 @@
         </div></a>
     </div>
 </footer>
+
 </div>
 
     <script src="mobile.js"></script>
@@ -338,7 +339,6 @@
     for (let i = 0; i < $hoverables.length; i++) {
     //if (window.CP.shouldStopExecution(0)) break;
     $hoverables[i].addEventListener('mouseenter', onMouseHover);
-    $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
     //$hoverables[i].addEventListener('touchstart', onMouseHover);
     //$hoverables[i].addEventListener('touchend', onMouseHoverOut);
     }
@@ -348,8 +348,8 @@
 
     function onMouseMove(e) {
     TweenMax.to($bigBall, .4, {
-        x: e.pageX - 15,
-        y: e.pageY - 15
+        x: e.pageX - 0,
+        y: e.pageY - 0
     });
     }
 
