@@ -56,10 +56,10 @@
     }
 
     .line {
-        width: 37px;
-        height: 4px;
+        width: 8vw;
+        height: 1vw;
         background-color: darkcyan;
-         margin: 12px 0;
+        margin: 16px 0;
     }
 
     
@@ -173,8 +173,6 @@
 
 <div style="display:none;" id="myDiv">
 
-
-
     <div class="cursor">
         <div class="cursor__ball cursor__ball--big ">
             <svg class="svg-circleplus" viewBox="0 0 100 100" style="
@@ -189,7 +187,7 @@
     </div>
     
 
-    <header>
+    <header id = "header">
         <h2 class = "logo" style="color: whitesmoke;">Yaswanth Pulavarthi.</h2>
         <nav>
         <ul class="nav__links">
@@ -216,7 +214,7 @@
             </div>
 
         </div>
-        <div style = "position: absolute; top: 25%;       top: 36%;
+        <div style = "position: absolute;top: 36%;
         display: flex;
         z-index: -1; padding: 100px 0 0 0;
         flex-flow: column wrap;">
@@ -264,11 +262,19 @@
                 </button>
             </div>              
         <div class = "zoom" >
-            <img id = "img-fit" class="center" src="me2.png" > 
+            <img id = "img-fit" class="center" src="me2.png" >          
 
         </div>
 
         <div id = "my-img" class = "zoom" >
+            <div style ="position: absolute;z-index: 10000; background: black;" id = "clipe"> 
+                <span style ="font-size: 6.5104166667vw;
+                line-height: 12.48vh;
+                /* letter-spacing: 1.555em; */
+                color: white;
+                background: black;">ヤスワンス・プラヴァルティ Я с в а н т П у л а в а р т и Γ ι α σ β ά ν θ Π ο υ λ α β ά ρ τι 亚 斯 旺 · 普 拉 瓦 西  ÿ à s ñ æ t h य स व न् थ पु ल व र्थी ย ส วั น ปู ล า ว าร ธี Ys̄ wạn pū lā wār ṭhī
+                 יאס וו נת' פו לו וא רתי 亞 斯 旺 普 拉 瓦 提 야 스 완 스 풀 라 바 르 티 ي اسو انث  بو لافا رثي </span>
+             </div>  
             <div >
                 <p class="footlinks" Style = "float: left;">&nbspConvey's Game</p>
                 <a id="start_game">
@@ -331,6 +337,7 @@
     const $bigBall = document.querySelectorAll('.cursor__ball--big');
     const $smallBall = document.querySelector('.cursor__ball--small');
     const $hoverables = document.querySelectorAll('body');
+    const $clip = document.getElementById('clipe');
 
     // Listeners
     document.body.addEventListener('mousemove', onMouseMove);
@@ -346,11 +353,16 @@
     // Move the cursor
 
 
+
     function onMouseMove(e) {
+        headerHeight = document.getElementById("header").offsetHeight + window.innerHeight;
+        TweenMax.to($clip, .4, {clipPath:'circle(127px at ' + (e.pageX) + 'px ' + (e.pageY-headerHeight) + 'px)'});
+        //$clip.style.clipPath =  'circle(127px at ' + e.pageX + 'px ' + e.pageY + 'px)';
     TweenMax.to($bigBall, .4, {
-        x: e.pageX - 0,
-        y: e.pageY - 0
+        x: e.pageX - 17,
+        y: e.pageY - 8
     });
+    
     }
 
     // Hover an element

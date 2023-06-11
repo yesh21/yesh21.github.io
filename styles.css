@@ -133,4 +133,7 @@ footer {
     .menu {
         display: initial;
     }
+    .logo {
+        font-size: 45px;
+    }
 }
