@@ -16,12 +16,12 @@
     font-family: monospace;
     white-space: nowrap;
     animation-name: writeText;
-    animation-duration: 500ms;
+    animation-duration: 2000ms;
     animation-fill-mode: forwards;
     
 }
 .cursorDash {
-    animation: blink 1s 3.5s infinite;
+    animation: blink 1s 6.5s infinite;
 }
 
 
@@ -30,7 +30,7 @@ from {
 width: 0;
 }
 to {
-width: fit-content;
+width: 100vmin;
 }
 }
 

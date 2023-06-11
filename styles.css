@@ -114,14 +114,9 @@ footer {
     cursor: pointer;
 }
 
-@media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px;
-    }
-    .overlay .close {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
+@media screen and (max-height: 500px) {
+    footer {
+        visibility: hidden;
     }
 }
 
@@ -134,6 +129,6 @@ footer {
         display: initial;
     }
     .logo {
-        font-size: 45px;
+        font-size: 30px;
     }
 }

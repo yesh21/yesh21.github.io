@@ -26,8 +26,8 @@
 
     .zoom{
         display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+        flex-wrap: wrap;
+        align-items: flex-start;
     }
 
     ::-webkit-scrollbar {
@@ -62,7 +62,7 @@
         margin: 16px 0;
     }
 
-    
+
     body .cursor {
         pointer-events: none;
     }
@@ -114,7 +114,7 @@
 }
     .color_chg-btn {
         position: absolute;
-    right: 1px;
+        right: 1px;
         padding: 6%;
     }
 
@@ -155,18 +155,19 @@
             <br>&nbsp&nbsp&nbsp&nbsp&nbsp  load          : loads the program
             <br>&nbsp&nbsp&nbsp&nbsp&nbsp  run           : runs the website.
             <br><br></p>
-            <p class="command" style="animation-delay: 3500ms;"><strong>&nbspPS C:\Users\Yaswanth Pulavarthi></strong>$load My website &&<br> run()<span class="cursorDash"><br>                                     _   _       
+            <p class="command" style="animation-delay: 3500ms;"><strong>&nbspPS C:\Users\Yaswanth Pulavarthi></strong>$load My website &&<br> run()</p>
+            <p class="command" style="animation-delay: 5000ms;"><span class="cursorDash"><br>                                     _   _       
                 <br>
                  _                 _ _             <br>
                 | | ___   __ _  __| (_)_ __   __ _ <br>
                 | |/ _ \ / _` |/ _` | | '_ \ / _` |<br>
                 | | (_) | (_| | (_| | | | | | (_| |<br>
                 |_|\___/ \__,_|\__,_|_|_| |_|\__, |<br>
-                ..............................|___/ </span></p>
-            <p class="command" style="animation-delay: 4500ms;">&nbsp Loading CSS...<br></p>
-            <p class="command" style="animation-delay: 5000ms;">&nbsp Loading images...</p>
-            <p class="command"style="animation-delay: 5500ms;">&nbsp Loading assets...</span><span class="cursorDash">_</span></p>
-            <p class="command" style="animation-delay: 5500ms;animation-duration: 4000ms;"><strong>&nbsp [################################################]</strong></p>
+                ..............................|___/ </span> <br>
+                &nbsp Loading CSS...<br></p>
+            <p class="command" style="animation-delay: 5700ms;">&nbsp Loading images...</p>
+            <p class="command"style="animation-delay: 5900ms;">&nbsp Loading assets...</span><span class="cursorDash">_</span></p>
+            <p class="command" style="animation-delay: 5900ms;animation-duration: 6000ms;"><strong>&nbsp [################################################]</strong></p>
         </div>
     </div>
 
@@ -174,9 +175,9 @@
 <div style="display:none;" id="myDiv">
 
     <div class="cursor">
-        <div class="cursor__ball cursor__ball--big ">
+        <div class="cursor__ball cursor__ball--big" style = "top:-140px; left: -140px;">
             <svg class="svg-circleplus" viewBox="0 0 100 100" style="
-            height: 40px;
+            height: 280px;
             stroke: black;
         ">
           <circle cx="50" cy="50" r="45" fill="none" stroke-width="1"></circle>
@@ -335,20 +336,13 @@
     
 <script id="rendered-js">
     const $bigBall = document.querySelectorAll('.cursor__ball--big');
-    const $smallBall = document.querySelector('.cursor__ball--small');
-    const $hoverables = document.querySelectorAll('body');
+    //const $smallBall = document.querySelector('.cursor__ball--small');
     const $clip = document.getElementById('clipe');
 
     // Listeners
     document.body.addEventListener('mousemove', onMouseMove);
     //document.body.addEventListener('touchmove', onMouseMove);
     //document.body.addEventListener('mousemove', onMouseHover);
-    for (let i = 0; i < $hoverables.length; i++) {
-    //if (window.CP.shouldStopExecution(0)) break;
-    $hoverables[i].addEventListener('mouseenter', onMouseHover);
-    //$hoverables[i].addEventListener('touchstart', onMouseHover);
-    //$hoverables[i].addEventListener('touchend', onMouseHoverOut);
-    }
 
     // Move the cursor
 
@@ -359,24 +353,16 @@
         TweenMax.to($clip, .4, {clipPath:'circle(127px at ' + (e.pageX) + 'px ' + (e.pageY-headerHeight) + 'px)'});
         //$clip.style.clipPath =  'circle(127px at ' + e.pageX + 'px ' + e.pageY + 'px)';
     TweenMax.to($bigBall, .4, {
-        x: e.pageX - 17,
-        y: e.pageY - 8
+        x: e.pageX,
+        y: e.pageY
     });
     
     }
-
-    // Hover an element
-    function onMouseHover() {
-    TweenMax.to($bigBall, .3, {
-        scale: 7
-    });
-    }
-
-    function onMouseHoverOut() {
-    TweenMax.to($bigBall, .3, {
-        scale: 1
-    });
-    }
+    //function onMouseHoverOut() {
+    //TweenMax.to($bigBall, .3, {
+    //    scale: 1
+    //});
+    //}
     </script>
 
 
