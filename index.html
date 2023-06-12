@@ -142,6 +142,16 @@
     float: right;
 }
 
+.codingText {
+        position: absolute;top: 36%;
+        display: flex;
+        z-index: -1; 
+        padding: 100px 0 0 0;
+        flex-flow: column wrap;
+}
+
+.cursor__ball:hover ~ .codingText { filter: url(#liquify); }
+
 </style>
 
 <body>
@@ -178,8 +188,8 @@
         <div class="cursor__ball cursor__ball--big" style = "top:-140px; left: -140px;">
             <svg class="svg-circleplus" viewBox="0 0 100 100" style="
             height: 280px;
-            stroke: black;
-        ">
+            stroke: black;">
+
           <circle cx="50" cy="50" r="45" fill="none" stroke-width="1"></circle>
           <line x1="30" y1="50" x2="70" y2="50" stroke-width="1"></line>
           <line x1="50" y1="30" x2="50" y2="70" stroke-width="1"></line>
@@ -202,12 +212,13 @@
             <div class = "line"></div>
             <div class = "line"></div>
         </div>
+        
     </header>
 
 
     <div id = "box" class = "workspace" >
         <div id="mobile__menu" class="overlay">
-            <a class="close">&times;</a>
+            <a class="menu cta close">X</a>
             <div class="overlay__content">
                 <a href="#">Services</a>
                 <a href="#">Projects</a>
@@ -215,36 +226,38 @@
             </div>
 
         </div>
-        <div style = "position: absolute;top: 36%;
-        display: flex;
-        z-index: -1; padding: 100px 0 0 0;
-        flex-flow: column wrap;">
-        <h2 class="section-title ">
-            <span class="paralax-title">
-            Coding is Art.
-        </span>
-        </h2>
-        <h2 class="section-title on-dark">
-            <span class="paralax-title">
-            Coding is Life
-        </span>
-        </h2>
-        <h2 class="section-title on-dark">
-            <span class="paralax-title">
-            Coding is Love
-        </span>
-        </h2>
-        <h2 class="section-title">
-            <span class="paralax-title">
-            Coding is Fire
-        </span>
-        </h2>
-     </div>
+
      <div class="cursor__ball" id = "bbig" style="top:30%;float: right;padding: 0 0 0 16%;">
         <svg height="80vmin" width="80vmin">
             <circle cx="40vmin" cy="40vmin" r="40vmin" stroke-width="0"></circle>
         </svg>
-            </div>
+     </div>
+
+
+            <div class = "codingText">
+                <h2 class="section-title ">
+                    <span class="paralax-title">
+                    Coding is Art.
+                </span>
+                </h2>
+                <h2 class="section-title on-dark">
+                    <span class="paralax-title">
+                    Coding is Life
+                </span>
+                </h2>
+                <h2 class="section-title on-dark">
+                    <span class="paralax-title">
+                    Coding is Love
+                </span>
+                </h2>
+                <h2 class="section-title">
+                    <span class="paralax-title">
+                    Coding is Fire
+                </span>
+                </h2>
+             </div>
+
+
             <div class="color_chg-btn">
                 <button id = "color_change" data-cursor="sizeLink" class="magnetic-btn" data-scroll-position="bottom" style="transform: translate3d(0px, 0px, 0px);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="65" viewBox="0 0 65 65"><path d="M49.462 1V35.055H45.679V7.451L6.651 46.4 3.976 43.726 43 4.78H15.321V1z" fill="black" stroke="black"></path></svg>
@@ -261,11 +274,11 @@
                         </text>
                       </svg>
                 </button>
-            </div>              
+            </div>        
+
         <div class = "zoom" >
             <img id = "img-fit" class="center" src="me2.png" >          
-
-        </div>
+        </div>  
 
         <div id = "my-img" class = "zoom" >
             <div style ="position: absolute;z-index: 10000; background: black;" id = "clipe"> 
@@ -296,7 +309,17 @@
             <svg width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none" style="background: white;">
                 <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="black" />
             </svg>
-            <div class="image-container" style="background: white;"></div>
+            <div class="image-container" style="background: white;">
+                <svg id="svgeffects">
+                    <defs>
+                      <filter class="safari_only" id="liquify">
+                              <feTurbulence baseFrequency="0.015" numOctaves="3" result="warp" type="fractalNoise"></feTurbulence>
+                        
+                              <feDisplacementMap id="liquid" in="SourceGraphic" in2="warp" scale="300" xChannelSelector="R" yChannelSelector="B"></feDisplacementMap>
+                          </filter>
+                    </defs>
+                  </svg>
+            </div>
         </div>
     </div>
 
@@ -349,7 +372,8 @@
 
 
     function onMouseMove(e) {
-        headerHeight = document.getElementById("header").offsetHeight + window.innerHeight;
+        //headerHeight = document.getElementById("header").offsetHeight + window.innerHeight;
+        headerHeight = $clip.offsetTop;
         TweenMax.to($clip, .4, {clipPath:'circle(127px at ' + (e.pageX) + 'px ' + (e.pageY-headerHeight) + 'px)'});
         //$clip.style.clipPath =  'circle(127px at ' + e.pageX + 'px ' + e.pageY + 'px)';
     TweenMax.to($bigBall, .4, {
