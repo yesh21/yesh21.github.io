@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable = no">
+
+        <title>Yaswanth Pulavarthi</title>
+        <meta name="author" content="Yaswanth Pulavarthi">
+    </head>
+
+    <style>
+body{
+    mix-blend-mode: difference;
+    background: wheat;
+    margin: 0;
+
+}
+
+::-webkit-scrollbar {
+         display: none;
+         scrollbar-width: none;
+    }
+
+.footlinks {
+    color: white;
+    display: block;
+    margin: 0;
+    font-size:5vw;
+    font-family: monospace;
+    white-space: nowrap;
+    float: right;
+   } 
+    </style>
+
+    <body>
+        <div id = "my-img" class = "zoom" > 
+            <div >
+                <p class="footlinks" Style = "float: left;">&nbspConvey's Game</p>
+                <a id="start_game">
+                    <img id="play_button"  src="play.png" style="border-radius: 50%;width: 6vw;">
+                </a>
+                <a id="reset_game">
+                    <img  src="refresh-arrow.png" style="border-radius: 50%;width: 6vw;">
+                </a>
+                
+            </div>
+            <canvas id="canvas" style="height: 100vh; width: 100vw;">
+            Your browser does not support the HTML5 canvas tag.
+            </canvas>
+
+        </div>
+        <script src="convey.js"></script>
+        <script>
+                    document.body.onclick = function() {
+            const colours = ["sandybrown", "seagreen", "skyblue", "turquoise", "thistle", "blueviolet", "aqua",
+             "aquamarine", "darkgoldenrod", "darkturquoise", "thistle", "yellowgreen", "violet"];
+            
+            document.body.style.background = colours[Math.floor(Math.random()*colours.length)];
+        };
+        </script>
+    </body>
+</html>

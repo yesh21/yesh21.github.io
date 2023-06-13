@@ -132,4 +132,7 @@ footer {
     .logo {
         font-size: 32px;
     }
+    .cursor__ball {
+        left:-16%;
+    }
 }
