@@ -28,15 +28,13 @@ window.onload = function() {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
 }, 10000);
+document.body.style.maxWidth = Math.max(600, window.innerHeight) +'px';
 
 StyleElements();
 
 }
 
-window.onresize = function() {
-    StyleElements();
-    //document.querySelector('.cursor__ball--big').style.transform = "translate(150px, 38vh)";
-}
+
 
 
 
