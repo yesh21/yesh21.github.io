@@ -35,6 +35,7 @@ StyleElements();
 
 window.onresize = function() {
     StyleElements();
+    document.querySelector('.cursor__ball--big').style.transform = "translate(150px, 38vh)";
 }
 
 
