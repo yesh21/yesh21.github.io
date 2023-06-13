@@ -28,15 +28,16 @@ window.onload = function() {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
 }, 10000);
-document.querySelector(".zoom").style.height = Math.max(600, window.innerHeight) +'px';
-document.getElementById("img-fit").style.height = Math.max(600, window.innerHeight) +'px';
+
 StyleElements();
 
 }
 
 window.onresize = function() {
     StyleElements();
-    //document.querySelector('.cursor__ball--big').style.transform = "translate(150px, 38vh)";
+    document.querySelector('.cursor__ball--big').style.transform = "translate(150px, 38vh)";
+    window.scrollBy(0, 1); // 0 pixels horizontal and 1 pixel down
+window.scrollBy(0, -1); // 0 pixels horizontal and 1 pixel up
 }
 
 
