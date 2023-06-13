@@ -18,7 +18,7 @@ function StyleElements() {
         document.body.style.overflowX = 'hidden';
         document.querySelector(".color_chg-btn").style.right = '1px';
     } else {
-        document.body.style.overflowX = 'visible';
+        document.body.style.overflowX = 'hidden'; // remember
         document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
     }
 }
@@ -35,7 +35,7 @@ StyleElements();
 
 window.onresize = function() {
     StyleElements();
-    document.querySelector(".main").style.width =  Math.max(600, window.innerWidth) +'px';
+    //document.querySelector(".main").style.width =  Math.max(600, window.innerWidth) +'px';
     //document.querySelector('.cursor__ball--big').style.transform = "translate(150px, 38vh)";
   //  window.scrollBy(0, 1); // 0 pixels horizontal and 1 pixel down
 //window.scrollBy(0, -1); // 0 pixels horizontal and 1 pixel up
