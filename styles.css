@@ -108,16 +108,20 @@ footer {
 
 .overlay .close {
     position: absolute;
-    right: 10vw;
-    font-size: 8vw;
+    right: 12vw;
+    font-size: 15vw;
     color: #edf0f1;
     cursor: pointer;
-    margin-top: 30px;
 }
 
-@media screen and (max-height: 500px) {
-    footer {
-        visibility: hidden;
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
     }
 }
 
@@ -130,9 +134,6 @@ footer {
         display: initial;
     }
     .logo {
-        font-size: 32px;
-    }
-    .cursor__ball {
-        left:-16%;
+        font-size: 45px;
     }
 }
