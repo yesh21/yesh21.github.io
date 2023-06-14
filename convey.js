@@ -31,7 +31,7 @@ class Cell
         context = canvas.getContext('2d');
         gameObjects = [];
         var numColumns = Math.floor(canvas.offsetWidth/4);
-        var numRows = Math.floor(window.innerHeight/4);
+        var numRows = Math.floor(canvas.offsetHeight/4);
 
         createGrid();
 

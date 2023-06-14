@@ -18,7 +18,7 @@ function StyleElements() {
         document.body.style.overflowX = 'hidden';
         document.querySelector(".color_chg-btn").style.right = '1px';
     } else {
-        document.body.style.overflowX = 'visible'; // remember
+        document.body.style.overflowX = 'hidden'; // remember
         document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
     }
 }
@@ -35,14 +35,7 @@ StyleElements();
 
 window.onresize = function() {
     StyleElements();
-    document.body.style.width =  Math.max(600, window.innerWidth) +'px';
-    document.body.style.height =  Math.max(600, window.innerHeight) +'px';
-    document.querySelectorAll(".zoom").style.width = Math.max(600, window.innerWidth) +'px';
-    document.querySelectorAll(".zoom").style.height = Math.max(600, window.innerHeight) +'px';
-    document.getElementById("img-fit").style.height = Math.max(600, window.innerHeight) +'px';
-    document.getElementById("img-fit").style.width = Math.max(600, window.innerWidth) +'px';
-    document.getElementById("my-img").style.height = Math.max(600, window.innerHeight) +'px';
-    //document.body.style.width =  '1000px';
+    //document.querySelector(".main").style.width =  Math.max(600, window.innerWidth) +'px';
     //document.body.style.width = "100%";
     //document.querySelector('.cursor__ball--big').style.transform = "translate(150px, 38vh)";
   //  window.scrollBy(0, 1); // 0 pixels horizontal and 1 pixel down
