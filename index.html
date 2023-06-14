@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
 
+<html class = "main" style = "    min-width: 100%;overflow-x: clip;">
+
+<meta name="viewport" content="user-scalable=no"/>
 <head>
-    <meta name="viewport" content="user-scalable = no">
     <title>Yaswanth Pulavarthi</title>
     <meta name="author" content="Yaswanth Pulavarthi">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="textbyscroll.css">
@@ -16,7 +17,7 @@
     
 
 
-    body, canvas, html, .zoom {
+    body, canvas, html, .zoom, .center {
   scroll-behavior: smooth;
   min-width: 600px;
   min-height: 600px;
@@ -28,6 +29,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+        width: 100%;
     }
 
     ::-webkit-scrollbar {
@@ -46,6 +48,8 @@
         object-fit: contain;
         display: block;
         margin: auto;
+        width: 100%;
+        height: 100%;
     }
 
 
@@ -62,14 +66,14 @@
         margin: 16px 0;
     }
 
-    
+
+    body .cursor {
+        pointer-events: none;
+    }
     
     body .cursor__ball {
         position: absolute;
-        top: 0;
-        left: 0;
         mix-blend-mode: difference;
-        z-index: 1000;
     }
     
     body .cursor__ball circle {
@@ -80,6 +84,7 @@
         mix-blend-mode: difference;
         background: wheat;
         animation: mymove 7s 1;
+        width: 100%;
 }
 
 @keyframes mymove {
@@ -133,10 +138,35 @@
     color: white;
     display: block;
     margin: 0;
-    font-size:2rem;
+    font-size:4vb;
     font-family: monospace;
     white-space: nowrap;
     float: right;
+}
+
+.codingText {
+        position: absolute;top: 36%;
+        display: flex;
+        z-index: -1; 
+        padding: 100px 0 0 0;
+        flex-flow: column wrap;
+}
+
+.cursor__ball:hover ~ .codingText { filter: url(#liquify); }
+
+
+.app-form-control {
+    width: 100%;
+    padding: 3vmin 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: black;
+    font-size: 4vmin;
+    font-weight: 600;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
 }
 
 </style>
@@ -152,8 +182,8 @@
             <br>&nbsp&nbsp&nbsp&nbsp&nbsp  load          : loads the program
             <br>&nbsp&nbsp&nbsp&nbsp&nbsp  run           : runs the website.
             <br><br></p>
-            <p class="command" style="animation-delay: 3500ms;"><strong>&nbspPS C:\Users\Yaswanth Pulavarthi></strong>$load My website &&<br> run()</p>
-            <p class="command" style="animation-delay: 5000ms;"><span class="cursorDash"><br>                                     _   _       
+            <p class="command" style="animation-delay: 3500ms;"><strong>&nbspPS C:\Users\Yaswanth Pulavarthi></strong>$load My website</p>
+            <p class="command" style="animation-delay: 5000ms;">&nbsp+  && run()<br><br> <span class="cursorDash">                                    _   _       
                 <br>
                  _                 _ _             <br>
                 | | ___   __ _  __| (_)_ __   __ _ <br>
@@ -172,11 +202,11 @@
 <div style="display:none;" id="myDiv">
 
     <div class="cursor">
-        <div class="cursor__ball cursor__ball--big" style = "top:-140px; left: -140px;">
+        <div class="cursor__ball cursor__ball--big" style = "top:-140px; left: -140px;z-index: 1000;">
             <svg class="svg-circleplus" viewBox="0 0 100 100" style="
             height: 280px;
-            stroke: black;
-        ">
+            stroke: black;">
+
           <circle cx="50" cy="50" r="45" fill="none" stroke-width="1"></circle>
           <line x1="30" y1="50" x2="70" y2="50" stroke-width="1"></line>
           <line x1="50" y1="30" x2="50" y2="70" stroke-width="1"></line>
@@ -189,7 +219,7 @@
         <h2 class = "logo" style="color: whitesmoke;">Yaswanth Pulavarthi.</h2>
         <nav>
         <ul class="nav__links">
-            <li><a href="#">Services</a></li>
+            <li><a href="convey.html">Convey's Game</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">About</a></li>
         </ul>
@@ -199,49 +229,52 @@
             <div class = "line"></div>
             <div class = "line"></div>
         </div>
+        
     </header>
 
 
     <div id = "box" class = "workspace" >
         <div id="mobile__menu" class="overlay">
-            <a class="close">&times;</a>
+            <a class="menu cta close">X</a>
             <div class="overlay__content">
-                <a href="#">Services</a>
+                <a href="convey.html">Fun Game</a>
                 <a href="#">Projects</a>
                 <a href="#">About</a>
             </div>
 
         </div>
-        <div style = "position: absolute;top: 36%;
-        display: flex;
-        z-index: -1; padding: 100px 0 0 0;
-        flex-flow: column wrap;">
-        <h2 class="section-title ">
-            <span class="paralax-title">
-            Coding is Art.
-        </span>
-        </h2>
-        <h2 class="section-title on-dark">
-            <span class="paralax-title">
-            Coding is Life
-        </span>
-        </h2>
-        <h2 class="section-title on-dark">
-            <span class="paralax-title">
-            Coding is Love
-        </span>
-        </h2>
-        <h2 class="section-title">
-            <span class="paralax-title">
-            Coding is Fire
-        </span>
-        </h2>
-     </div>
+
      <div class="cursor__ball" id = "bbig" style="top:30%;float: right;padding: 0 0 0 16%;">
         <svg height="80vmin" width="80vmin">
             <circle cx="40vmin" cy="40vmin" r="40vmin" stroke-width="0"></circle>
         </svg>
-            </div>
+     </div>
+
+
+            <div class = "codingText">
+                <h2 class="section-title ">
+                    <span class="paralax-title">
+                    Coding is Art.
+                </span>
+                </h2>
+                <h2 class="section-title on-dark">
+                    <span class="paralax-title">
+                    Coding is Life
+                </span>
+                </h2>
+                <h2 class="section-title on-dark">
+                    <span class="paralax-title">
+                    Coding is Love
+                </span>
+                </h2>
+                <h2 class="section-title">
+                    <span class="paralax-title">
+                    Coding is Fire
+                </span>
+                </h2>
+             </div>
+
+
             <div class="color_chg-btn">
                 <button id = "color_change" data-cursor="sizeLink" class="magnetic-btn" data-scroll-position="bottom" style="transform: translate3d(0px, 0px, 0px);">
                     <svg xmlns="http://www.w3.org/2000/svg" width="65" viewBox="0 0 65 65"><path d="M49.462 1V35.055H45.679V7.451L6.651 46.4 3.976 43.726 43 4.78H15.321V1z" fill="black" stroke="black"></path></svg>
@@ -258,58 +291,61 @@
                         </text>
                       </svg>
                 </button>
-            </div>              
-        <div class = "zoom" >
-            <img id = "img-fit" class="center" src="me2.png" >          
+            </div>        
 
-        </div>
+        <div class = "zoom" style="height: 100%;">
+            <img id = "img-fit" class="center" src="me2.png" >          
+        </div>  
 
         <div id = "my-img" class = "zoom" >
-            <div style ="position: absolute;z-index: 10000; background: black;" id = "clipe"> 
-                <span style ="font-size: 6.5104166667vw;
-                line-height: 12.48vh;
+            <div style ="z-index: 10000;" id = "clipe"> 
+                <span style ="font-size: 6.5104166667vmax;
+                line-height: 13.48vmin;
                 /* letter-spacing: 1.555em; */
-                color: white;
-                background: black;">ヤスワンス・プラヴァルティ Я с в а н т П у л а в а р т и Γ ι α σ β ά ν θ Π ο υ λ α β ά ρ τι 亚 斯 旺 · 普 拉 瓦 西  ÿ à s ñ æ t h य स व न् थ पु ल व र्थी ย ส วั น ปู ล า ว าร ธี Ys̄ wạn pū lā wār ṭhī
+                color: black;
+                pointer-events: none;">ヤスワンス・プラヴァルティ Я с в а н т П у л а в а р т и Γ ι α σ β ά ν θ Π ο υ λ α β ά ρ τι 亚 斯 旺 · 普 拉 瓦 西  ÿ à s ñ æ t h य स व न् थ पु ल व र्थी ย ส วั น ปู ล า ว าร ธี Ys̄ wạn pū lā wār ṭhī
                  יאס וו נת' פו לו וא רתי 亞 斯 旺 普 拉 瓦 提 야 스 완 스 풀 라 바 르 티 ي اسو انث  بو لافا رثي </span>
              </div>  
-            <div >
-                <p class="footlinks" Style = "float: left;">&nbspConvey's Game</p>
-                <a id="start_game">
-                    <img id="play_button"  src="pause.png" style="border-radius: 50%;width: 50px;">
-                </a>
-                <a id="reset_game">
-                    <img  src="refresh-arrow.png" style="border-radius: 50%;width: 50px;">
-                </a>
-                
-            </div>
-            <canvas id="canvas">
-            Your browser does not support the HTML5 canvas tag.
-            </canvas>
-
         </div>
 
         <div style="background: white ; position: relative;">
             <svg width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none" style="background: white;">
                 <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="black" />
             </svg>
-            <div class="image-container" style="background: white;"></div>
+            <div class="outer-container" style="background: white;">
+                  <div>
+
+                    <input class="app-form-control" placeholder="NAME" value="Yaswanth Pulavarthi">
+                    <input class="app-form-control" placeholder="EMAIL">
+                    <input class="app-form-control" placeholder="MESSAGE">
+      
+          </div>
+          <svg id="svgeffects">
+            <defs>
+              <filter class="safari_only" id="liquify">
+                      <feTurbulence baseFrequency="0.015" numOctaves="3" result="warp" type="fractalNoise"></feTurbulence>
+                
+                      <feDisplacementMap id="liquid" in="SourceGraphic" in2="warp" scale="300" xChannelSelector="R" yChannelSelector="B"></feDisplacementMap>
+                  </filter>
+            </defs>
+          </svg>
+            </div>
         </div>
     </div>
 
 
 <footer class = "footer">    
-    <div class="overlay__content" style="align-items: flex-start;">
+    <div class="overlay__content" style="align-items: end;">
         <a href = "https://github.com/yesh21"><div>
-            <img  src="github.png" style="border-radius: 50%;width: 40px;">
+            <img  src="github.png" style="border-radius: 50%;width: 4.5vb;float: right;">
             <p class="footlinks">Github</p>
         </div></a>
         <a href = "https://www.linkedin.com/in/yaswanth-pulavarthi-447796195"><div>
-            <img src="linkedin.png" style="border-radius: 50%;width: 40px;">
+            <img src="linkedin.png" style="border-radius: 50%;width: 4.5vb;float: right;">
             <p class="footlinks">Linkedin</p>
         </div></a>
         <a href = "https://www.reddit.com/user/yesh__21/"><div>
-            <img src="reddit.png" style="border-radius: 50%;width: 40px;">
+            <img src="reddit.png" style="border-radius: 50%;width: 4.5vb;float: right;">
             <p class="footlinks">Reddit</p>
         </div></a>
     </div>
@@ -332,8 +368,8 @@
 
     
 <script id="rendered-js">
-    const $bigBall = document.querySelectorAll('.cursor__ball--big');
-    const $smallBall = document.querySelector('.cursor__ball--small');
+    const $bigBall = document.querySelector('.cursor__ball--big');
+    //const $smallBall = document.querySelector('.cursor__ball--small');
     const $clip = document.getElementById('clipe');
 
     // Listeners
@@ -346,7 +382,8 @@
 
 
     function onMouseMove(e) {
-        headerHeight = document.getElementById("header").offsetHeight + window.innerHeight;
+        //headerHeight = document.getElementById("header").offsetHeight + window.innerHeight;
+        headerHeight = $clip.offsetTop;
         TweenMax.to($clip, .4, {clipPath:'circle(127px at ' + (e.pageX) + 'px ' + (e.pageY-headerHeight) + 'px)'});
         //$clip.style.clipPath =  'circle(127px at ' + e.pageX + 'px ' + e.pageY + 'px)';
     TweenMax.to($bigBall, .4, {
@@ -355,11 +392,11 @@
     });
     
     }
-    function onMouseHoverOut() {
-    TweenMax.to($bigBall, .3, {
-        scale: 1
-    });
-    }
+    //function onMouseHoverOut() {
+    //TweenMax.to($bigBall, .3, {
+    //    scale: 1
+    //});
+    //}
     </script>
 
 

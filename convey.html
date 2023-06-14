@@ -1,67 +1,61 @@
-<head>
-    <meta charset = "UTF-8" />
-    <title>The Game of Life</title>
-    <link rel="stylesheet" href="life.css">    
-</head>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable = no">
 
-<style>
-    body {
-    padding: 20px;
-    background-color: #444;
+        <title>Yaswanth Pulavarthi</title>
+        <meta name="author" content="Yaswanth Pulavarthi">
+    </head>
+
+    <style>
+body{
+    mix-blend-mode: difference;
+    background: wheat;
+    margin: 0;
+
 }
 
-#gridContainer {
-    padding-bottom: 10px;
-}
+::-webkit-scrollbar {
+         display: none;
+         scrollbar-width: none;
+    }
 
-table {
-    background-color: #C5D6C6;
-    border-spacing: 0;
-}
+.footlinks {
+    color: white;
+    display: block;
+    margin: 0;
+    font-size:5vw;
+    font-family: monospace;
+    white-space: nowrap;
+    float: right;
+   } 
+    </style>
 
-td {
-    border: 1px solid #F1F5DA;
-    border-radius: 3px;
-    width: 10px;
-    height: 10px;
-}
+    <body>
+        <div id = "my-img" class = "zoom" > 
+            <div >
+                <p class="footlinks" Style = "float: left;">&nbspConvey's Game</p>
+                <a id="start_game">
+                    <img id="play_button"  src="play.png" style="border-radius: 50%;width: 6vw;">
+                </a>
+                <a id="reset_game">
+                    <img  src="refresh-arrow.png" style="border-radius: 50%;width: 6vw;">
+                </a>
+                
+            </div>
+            <canvas id="canvas" style="height: 100vh; width: 100%;">
+            Your browser does not support the HTML5 canvas tag.
+            </canvas>
 
-span {
-    color: #222;
-}
-
-#start,
-#clear,
-#random {
-    padding: .75em;
-    border-radius: 5px;
-    border: none;    
-    background: linear-gradient(
-        to bottom right,
-        #C5DEC6, #587559);
-}
-
-td.dead {
-    background-color: transparent;
-}
-
-td.live {
-    background-color: #CC4774;
-    border-radius: 10px;
-}
-</style>
-<body>
-
-<div id="gridContainer">
-    
-</div>
-
-<div class="controls">
-<button id="start"><span>Start</span></button>
-<button id="clear"><span>Clear</span></button>
-<button id="random"><span>Random</span></button>
-</div>
-    
-<script src="zoom.js"></script>
-    
-</body>
+        </div>
+        <script src="convey.js"></script>
+        <script>
+                    document.body.onclick = function() {
+            const colours = ["sandybrown", "seagreen", "skyblue", "turquoise", "thistle", "blueviolet", "aqua",
+             "aquamarine", "darkgoldenrod", "darkturquoise", "thistle", "yellowgreen", "violet"];
+            
+            document.body.style.background = colours[Math.floor(Math.random()*colours.length)];
+        };
+        </script>
+    </body>
+</html>
