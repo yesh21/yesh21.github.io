@@ -35,6 +35,7 @@ StyleElements();
 
 window.onresize = function() {
     StyleElements();
+    document.body.style.width =  Math.max(600, window.innerWidth) +'px';
     //document.body.style.width =  '1000px';
     //document.body.style.width = "100%";
     //document.querySelector('.cursor__ball--big').style.transform = "translate(150px, 38vh)";
