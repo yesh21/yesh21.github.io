@@ -15,10 +15,10 @@ function StyleElements() {
     
     if(window.innerWidth > 600){
         //document.getElementById("bbig").style.scale = 1+(diff/1200);
-        document.body.style.overflowX = 'hidden';
+        document.body.style.overflowX = 'clip';
         document.querySelector(".color_chg-btn").style.right = '1px';
     } else {
-        document.body.style.overflowX = 'hidden'; // remember
+        document.body.style.overflowX = 'clip'; // remember
         document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
     }
 }
