@@ -4,12 +4,14 @@
 <head>
     <title>Yaswanth Pulavarthi</title>
     <meta name="author" content="Yaswanth Pulavarthi">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="user-scalable=no">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="textbyscroll.css">
     <link rel="stylesheet" href="terminal.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>	
 </head>
 
 <style>
@@ -49,6 +51,7 @@
         margin: auto;
         width: 100%;
         height: 100%;
+        z-index: -1;
     }
 
 
@@ -82,7 +85,7 @@
     body {
         mix-blend-mode: difference;
         background: wheat;
-        animation: mymove 7s 1;
+        animation: mymove 6s;
         width: 100%;
 }
 
@@ -168,6 +171,25 @@
     transition: border-color .2s;
 }
 
+.intro-text {
+    color: black;
+    text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+}
+
+.line1 {
+  width: 100%;
+  max-width: 800px;
+  height: 8px;
+  margin: 0 0 10px 0;
+  position: relative;
+  display: inline-block;
+  background-color: rgba(255,255,255,1);
+}
+
+.orangeWrapper {
+  padding:0;
+}
+
 </style>
 
 <body>
@@ -215,7 +237,7 @@
     
 
     <header id = "header">
-        <h2 class = "logo" style="color: whitesmoke;">Yaswanth Pulavarthi.</h2>
+        <h2 class = "logo">Yaswanth Pulavarthi.</h2>
         <nav>
         <ul class="nav__links">
             <li><a href="convey.html">Convey's Game</a></li>
@@ -296,15 +318,26 @@
             <img id = "img-fit" class="center" src="me2.png" >          
         </div>  
 
+
+
         <div id = "my-img" class = "zoom" >
+            <div id = "clipe"> 
+                <h2 style ="font-size: 6.5104166667vmax;
+                line-height: 14.48vmin;
+                /* letter-spacing: 1.555em; */
+                color: ghostwhite;
+                pointer-events: none;">Hello <span class ="intro-text">bruh,</span> Welcome to my website! I am a passionate <span class ="intro-text">Software Enginner</span> from <span class ="intro-text">India.</span> I use coding as tool to repair and create <span class ="intro-text">Magical</span>  things.
+                 I am interested in <span class ="intro-text">AI stuff.</span> </h2>
+             </div> 
+
             <div style ="z-index: 10000;" id = "clipe"> 
                 <span style ="font-size: 6.5104166667vmax;
                 line-height: 13.48vmin;
                 /* letter-spacing: 1.555em; */
                 color: black;
-                pointer-events: none;">ヤスワンス・プラヴァルティ Я с в а н т П у л а в а р т и Γ ι α σ β ά ν θ Π ο υ λ α β ά ρ τι 亚 斯 旺 · 普 拉 瓦 西  ÿ à s ñ æ t h य स व न् थ पु ल व र्थी ย ส วั น ปู ล า ว าร ธี Ys̄ wạn pū lā wār ṭhī
-                 יאס וו נת' פו לו וא רתי 亞 斯 旺 普 拉 瓦 提 야 스 완 스 풀 라 바 르 티 ي اسو انث  بو لافا رثي </span>
-             </div>  
+                pointer-events: none;">ヤスワンス・プラヴァルティ Я с в а н т П у л а в а р т и Γ ι α σ β ά ν θ Π ο υ λ α β ά ρ τι 亚 斯 旺 · 普 拉 瓦 西  ÿ à s ñ æ t h ย ส วั น ปู ล า ว าร ธี
+                 יאס וו נת' פו לו וא רתי 亞 斯 旺 普 拉 瓦 提 야 스 완 스 풀 라 바 르 티  Ys̄ wạn pū lā ār ṭ hī ي اسو انث  بو لافا رثي य स व न् थ पु ल व र्थी</span>
+             </div>   
         </div>
 
         <div style="background: white ; position: relative;">
@@ -367,6 +400,7 @@
 
     
 <script id="rendered-js">
+    
     const $bigBall = document.querySelector('.cursor__ball--big');
     //const $smallBall = document.querySelector('.cursor__ball--small');
     const $clip = document.getElementById('clipe');
@@ -382,8 +416,8 @@
 
     function onMouseMove(e) {
         //headerHeight = document.getElementById("header").offsetHeight + window.innerHeight;
-        headerHeight = $clip.offsetTop;
-        TweenMax.to($clip, .4, {clipPath:'circle(127px at ' + (e.pageX) + 'px ' + (e.pageY-headerHeight) + 'px)'});
+        //headerHeight = $clip.offsetTop;
+        //TweenMax.to($clip, .4, {clipPath:'circle(127px at ' + (e.pageX) + 'px ' + (e.pageY-headerHeight) + 'px)'});
         //$clip.style.clipPath =  'circle(127px at ' + e.pageX + 'px ' + e.pageY + 'px)';
     TweenMax.to($bigBall, .4, {
         x: e.pageX,
@@ -397,6 +431,7 @@
     //});
     //}
     </script>
+
 
 
 

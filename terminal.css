@@ -15,7 +15,7 @@
     overflow: hidden;
     font-family: monospace;
     white-space: nowrap;
-    animation-name: writeText;
+    animation: writeText;
     animation-duration: 2000ms;
     animation-fill-mode: forwards;
     

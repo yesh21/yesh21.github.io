@@ -62,6 +62,15 @@ td.live {
 <button id="random"><span>Random</span></button>
 </div>
     
+<div class="panel orangeWrapper">
+    <section class="panel orange">
+      
+      <h2 style="    color: wheat;
+      font-size: 10vw;
+      margin: auto;">This panel grows in size</h2>
+    </section>
+</div>
+
 <svg viewBox="0 0 180 100">
     <filter id="noise" x="0%" y="0%" width="100%" height="100%">
         <feTurbulence baseFrequency=".99 0" result="NOISE" numOctaves="2"></feTurbulence>
@@ -71,6 +80,34 @@ td.live {
       
       <image xlink:href="https://images.unsplash.com/photo-1546207438-5685e45838d7?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ" x="0" y="0" width="100%" height="100%" filter="url(#noise)"></image>
 </svg>
-<script src="zoom.js"></script>
+<script src="zoom.js">
+        gsap.registerPlugin(ScrollTrigger);
+
+
+
+// --- ORANGE PANEL ---
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".orangeWrapper",
+    scrub: true,
+    pin: true,
+    
+    start: "50% 50%",
+    end: "+=200%"
+  }
+})
+
+.from(".orange", {
+  scale: 0.5, 
+  ease: "none"
+})
+
+.from(".line-2", {
+  scaleX:0,
+  ease:"none",
+  transformOrigin:"left top"
+}, 0)
+</script>
     
 </body>

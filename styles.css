@@ -20,6 +20,7 @@ footer {
 
 .logo {
     margin-right: auto;
+    color: whitesmoke;
 
 }
 
@@ -130,7 +131,7 @@ footer {
         display: initial;
     }
     .logo {
-        font-size: 32px;
+        font-size: 4.5vi;
     }
     .cursor__ball {
         left:-16%;
