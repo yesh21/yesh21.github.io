@@ -28,6 +28,27 @@ window.onload = function() {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
 }, 10000);
+setTimeout(function () {
+ //     ScrollTrigger.refresh()
+ ScrollTrigger.refresh()
+      gsap.registerPlugin(ScrollTrigger);
+      const tl = gsap.timeline( {
+  scrollTrigger: {
+    trigger: ".orange",
+    scrub: true,
+    pin: ".orange",
+    start: "top 5%",
+    end: "+=1200"
+  }
+})
+
+
+  tl
+   .to('.intro-text-bold', { opacity: 0.3 })
+   .to('.intro-text', { color: "darkcyan" })
+
+}, 10000);
+
 
 StyleElements();
 

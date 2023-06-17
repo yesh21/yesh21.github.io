@@ -103,11 +103,49 @@ const tl = gsap.timeline({
   ease: "none"
 })
 
-.from(".line-2", {
-  scaleX:0,
-  ease:"none",
-  transformOrigin:"left top"
-}, 0)
+
+$( document ).ready(function() {
+      ScrollTrigger.refresh()
+      gsap.registerPlugin(ScrollTrigger);
+gsap.from(".aboutText", {
+  scrollTrigger: {
+    trigger: ".aboutme",
+    scrub: true,
+    markers:true,
+    pin: ".orange",
+    start: "top top",
+    end: "+=100%"
+  },
+  xPercent: 100,
+  delay: -1.5,
+  ease: "power2.inOut"
+});
+
+});
+
+</script>
+<script>
+    // --- ORANGE PANEL ---
+$( document ).ready(function() {
+ //     ScrollTrigger.refresh()
+ ScrollTrigger.refresh()
+      gsap.registerPlugin(ScrollTrigger);
+      const tl = gsap.timeline( {
+  scrollTrigger: {
+    trigger: ".orange",
+    scrub: true,
+    pin: ".orange",
+    start: "top 5%",
+    end: "+=1200"
+  }
+})
+
+
+  tl
+   .to('.intro-text-bold', { opacity: 0.3 })
+   .to('.intro-text', { color: "darkcyan" })
+
+});
 </script>
     
 </body>
