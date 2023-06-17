@@ -27,7 +27,7 @@ window.onload = function() {
   setTimeout(function () {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
-}, 10000);
+}, 1);
 setTimeout(function () {
  //     ScrollTrigger.refresh()
  ScrollTrigger.refresh()
@@ -36,19 +36,25 @@ setTimeout(function () {
   scrollTrigger: {
     trigger: ".orange",
     scrub: true,
-    //markers: true,
+    markers: true,
     pin: ".orange",
-    start: "top 5%",
-    end: "+=350%"
+    start: "top top",
+    end: "+=500%"
   }
 })
 
+//tl.totalDuration(20); 
 
   tl
-   .to('.intro-text-bold', { opacity: 0.3 })
-   .to('.intro-text', { color: "darkcyan" })
+  //.to('.center', { opacity: 0 })
+  .to('.intro-text-bold', { delay: 15 })
+   .to('.intro-text-bold', { opacity: 0.1, duration: 10})
+   //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
+   .to('.intro-text', {fontSize: "10vmax", duration: 10}) //color: "darkcyan",
+   .to('.intro-text-bold', { delay: 10 })
+   //.from(".intro-text",  { y: innerHeight * 1.5 })
 
-}, 10000);
+}, 1);
 
 
 StyleElements();
