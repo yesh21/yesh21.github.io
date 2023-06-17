@@ -158,7 +158,6 @@
 
 .cursor__ball:hover ~ .codingText { filter: url(#liquify); }
 
-
 .app-form-control {
     width: 100%;
     padding: 3vmin 0;
@@ -254,7 +253,6 @@
         
     </header>
 
-
     <div id = "box" class = "workspace" >
         <div id="mobile__menu" class="overlay">
             <a class="menu cta close">X</a>
@@ -319,16 +317,27 @@
         <div class = "zoom" style="height: 100%;">
             <img id = "img-fit" class="center" src="me2.png" >          
         </div>  
+
+        <div class = "aboutme orange" id = "clipe"> 
+            <h2 class = "aboutText" style ="font-size: 6.5104166667vmax;
+            line-height: 14.48vmin;
+            /* letter-spacing: 1.555em; */
+            color: ghostwhite;
+            pointer-events: none; margin: 0; padding: 0;">
+            <span class ="intro-text-bold">Hello </span>
+            <span class ="intro-text">bruh, </span>
+            <span class ="intro-text-bold">Welcome to my website! I am a passionate </span>
+             <span class ="intro-text">Software Enginner </span>
+             <span class ="intro-text-bold">from</span>
+              <span class ="intro-text"> India.</span>
+              <span class ="intro-text-bold"> I use coding as tool to repair and create</span> 
+               <span class ="intro-text">Magical</span>
+               <span class ="intro-text-bold"> things. I am interested in </span>
+             <span class ="intro-text">AI stuff.</span> </h2>
+         </div> 
         
         <div id = "my-img" class = "zoom" >
-            <div class = "aboutme" id = "clipe"> 
-                <h2 class = "aboutText" style ="font-size: 6.5104166667vmax;
-                line-height: 14.48vmin;
-                /* letter-spacing: 1.555em; */
-                color: ghostwhite;
-                pointer-events: none;">Hello <span class ="intro-text">bruh,</span> Welcome to my website! I am a passionate <span class ="intro-text">Software Enginner</span> from <span class ="intro-text">India.</span> I use coding as tool to repair and create <span class ="intro-text">Magical</span>  things.
-                 I am interested in <span class ="intro-text">AI stuff.</span> </h2>
-             </div> 
+
 
             <div style="z-index: 1001;" id = "clipe"> 
                 <span style ="font-size: 6.5104166667vmax;
@@ -348,8 +357,8 @@
                   </filter>
             </defs>
           </svg>
-        <svg width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none" style="background: white;">
-            <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="black" />
+        <svg width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
+            <path d="M 0 80 L 0 40 Q 250 0 500 40 L 500 80 Z" fill="white" />
         </svg>
         <div style="background: white ; position: relative;padding: 10vmin 0;        display: flex;">
 
@@ -361,6 +370,7 @@
             margin-right: 5.5vb; 
     margin-bottom: 5.5vb;">
                   <div>
+                    
                     <input class="app-form-control" placeholder="NAME" value="Yaswanth Pulavarthi">
                     <input class="app-form-control" placeholder="EMAIL">
                     <input class="app-form-control" style="padding: 6vmin 0;" placeholder="MESSAGE">
@@ -386,6 +396,7 @@
             <p class="footlinks">Reddit</p>
         </div></a>
     </div>
+        
 </footer>
 
 </div>
@@ -423,14 +434,32 @@
     }
     
     </script>
-    <script>
+<script>
+// --- ORANGE PANEL ---
+$( document ).ready(function() {
+ //     ScrollTrigger.refresh()
+ ScrollTrigger.refresh()
+      gsap.registerPlugin(ScrollTrigger);
+      const tl = gsap.timeline( {
+  scrollTrigger: {
+    trigger: ".orange",
+    scrub: true,
+    pin: ".orange",
+    start: "top 5%",
+    end: "+=1200"
+  }
+})
+
+
+  tl
+   .to('.intro-text-bold', { opacity: 0.3 })
+   .to('.intro-text', { color: "darkcyan" })
+
+});
 
 
 
-
-
-        
-    </script>
+</script>
 
 
 
