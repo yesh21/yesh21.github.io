@@ -27,7 +27,7 @@ window.onload = function() {
   setTimeout(function () {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
-}, 1);
+}, 10000);
 
 StyleElements();
 
