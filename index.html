@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="textbyscroll.css">
     <link rel="stylesheet" href="terminal.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+
 </head>
 
 <style>
@@ -141,6 +142,7 @@
     display: block;
     margin: 0;
     font-size:4vb;
+    font-weight: 600;
     font-family: monospace;
     white-space: nowrap;
     float: right;
@@ -162,11 +164,11 @@
     padding: 3vmin 0;
     background: none;
     border: none;
-    border-bottom: 1px solid #666;
-    color: black;
+    border-bottom: 1px solid #000;
+    color: darkcyan;
     font-size: 4vmin;
     font-weight: 600;
-    text-transform: uppercase;
+
     outline: none;
     transition: border-color .2s;
 }
@@ -218,7 +220,6 @@
             <p class="command" style="animation-delay: 5900ms;animation-duration: 6000ms;"><strong>&nbsp [################################################]</strong></p>
         </div>
     </div>
-
 
 <div style="display:none;" id="myDiv">
 
@@ -312,17 +313,16 @@
                         </text>
                       </svg>
                 </button>
-            </div>        
+            </div>  
+              
 
         <div class = "zoom" style="height: 100%;">
             <img id = "img-fit" class="center" src="me2.png" >          
         </div>  
-
-
-
+        
         <div id = "my-img" class = "zoom" >
-            <div id = "clipe"> 
-                <h2 style ="font-size: 6.5104166667vmax;
+            <div class = "aboutme" id = "clipe"> 
+                <h2 class = "aboutText" style ="font-size: 6.5104166667vmax;
                 line-height: 14.48vmin;
                 /* letter-spacing: 1.555em; */
                 color: ghostwhite;
@@ -330,7 +330,7 @@
                  I am interested in <span class ="intro-text">AI stuff.</span> </h2>
              </div> 
 
-            <div style ="z-index: 10000;" id = "clipe"> 
+            <div style="z-index: 1001;" id = "clipe"> 
                 <span style ="font-size: 6.5104166667vmax;
                 line-height: 13.48vmin;
                 /* letter-spacing: 1.555em; */
@@ -339,20 +339,7 @@
                  יאס וו נת' פו לו וא רתי 亞 斯 旺 普 拉 瓦 提 야 스 완 스 풀 라 바 르 티  Ys̄ wạn pū lā ār ṭ hī ي اسو انث  بو لافا رثي य स व न् थ पु ल व र्थी</span>
              </div>   
         </div>
-
-        <div style="background: white ; position: relative;">
-            <svg width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none" style="background: white;">
-                <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="black" />
-            </svg>
-            <div class="outer-container" style="background: white;">
-                  <div>
-
-                    <input class="app-form-control" placeholder="NAME" value="Yaswanth Pulavarthi">
-                    <input class="app-form-control" placeholder="EMAIL">
-                    <input class="app-form-control" placeholder="MESSAGE">
-      
-          </div>
-          <svg id="svgeffects">
+        <svg id="svgeffects">
             <defs>
               <filter class="safari_only" id="liquify">
                       <feTurbulence baseFrequency="0.015" numOctaves="3" result="warp" type="fractalNoise"></feTurbulence>
@@ -361,6 +348,24 @@
                   </filter>
             </defs>
           </svg>
+        <svg width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none" style="background: white;">
+            <path d="M0,0 L0,40 Q250,80 500,40 L500,0 Z" fill="black" />
+        </svg>
+        <div style="background: white ; position: relative;padding: 10vmin 0;        display: flex;">
+
+            <h2 style="    padding: 4vmin 28vmin 0 0;
+            max-width: 0%;
+            font-size: 7vmin;
+            transform: rotate(270deg);">Let's work together</h2>
+            <div class="outer-container" style="background: white;
+            margin-right: 5.5vb; 
+    margin-bottom: 5.5vb;">
+                  <div>
+                    <input class="app-form-control" placeholder="NAME" value="Yaswanth Pulavarthi">
+                    <input class="app-form-control" placeholder="EMAIL">
+                    <input class="app-form-control" style="padding: 6vmin 0;" placeholder="MESSAGE">
+      
+          </div>
             </div>
         </div>
     </div>
@@ -392,7 +397,7 @@
     <script>
         document.getElementById("color_change").onclick = function() {
             const colours = ["sandybrown", "seagreen", "skyblue", "turquoise", "thistle", "blueviolet", "aqua",
-             "aquamarine", "darkgoldenrod", "darkturquoise", "thistle", "yellowgreen", "violet"];
+             "aquamarine", "darkgoldenrod", "darkturquoise", "thistle", "yellowgreen", "violet", "darkorange", "darkkhaki"];
             
             document.body.style.background = colours[Math.floor(Math.random()*colours.length)];
         };
@@ -402,37 +407,30 @@
 <script id="rendered-js">
     
     const $bigBall = document.querySelector('.cursor__ball--big');
-    //const $smallBall = document.querySelector('.cursor__ball--small');
-    const $clip = document.getElementById('clipe');
+    
 
     // Listeners
     document.body.addEventListener('mousemove', onMouseMove);
-    //document.body.addEventListener('touchmove', onMouseMove);
-    //document.body.addEventListener('mousemove', onMouseHover);
-
-    // Move the cursor
-
 
 
     function onMouseMove(e) {
-        //headerHeight = document.getElementById("header").offsetHeight + window.innerHeight;
-        //headerHeight = $clip.offsetTop;
-        //TweenMax.to($clip, .4, {clipPath:'circle(127px at ' + (e.pageX) + 'px ' + (e.pageY-headerHeight) + 'px)'});
-        //$clip.style.clipPath =  'circle(127px at ' + e.pageX + 'px ' + e.pageY + 'px)';
+
     TweenMax.to($bigBall, .4, {
         x: e.pageX,
         y: e.pageY
     });
     
     }
-    //function onMouseHoverOut() {
-    //TweenMax.to($bigBall, .3, {
-    //    scale: 1
-    //});
-    //}
+    
     </script>
+    <script>
 
 
+
+
+
+        
+    </script>
 
 
 

@@ -27,7 +27,7 @@ window.onload = function() {
   setTimeout(function () {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
-}, 10000);
+}, 1);
 
 StyleElements();
 
@@ -41,6 +41,8 @@ window.onresize = function() {
   //  window.scrollBy(0, 1); // 0 pixels horizontal and 1 pixel down
 //window.scrollBy(0, -1); // 0 pixels horizontal and 1 pixel up
 }
+
+
 
 
 

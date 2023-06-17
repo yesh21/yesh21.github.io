@@ -5,9 +5,9 @@ body {
 
 .outer-container {
     max-width: 600px;
-    margin: auto;
+    margin: auto 0;
     width: 90%;
-    padding: 80px 0px 0 0;
+  
     position: relative;
 }
 
