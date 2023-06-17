@@ -36,10 +36,10 @@ setTimeout(function () {
   scrollTrigger: {
     trigger: ".orange",
     scrub: true,
-    markers: true,
+    //markers: true,
     pin: ".orange",
     start: "top 5%",
-    end: "+=250%"
+    end: "+=350%"
   }
 })
 
