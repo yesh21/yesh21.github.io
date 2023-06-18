@@ -27,16 +27,18 @@ window.onload = function() {
   setTimeout(function () {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
-}, 1);
+}, 10000);
 setTimeout(function () {
  //     ScrollTrigger.refresh()
  ScrollTrigger.refresh()
+
       gsap.registerPlugin(ScrollTrigger);
       const tl = gsap.timeline( {
   scrollTrigger: {
+    normalizeScroll: true,
     trigger: ".orange",
-    scrub: true,
-    markers: true,
+    scrub: 1,
+    //markers: true,
     pin: ".orange",
     start: "top top",
     end: "+=500%"
@@ -54,7 +56,7 @@ setTimeout(function () {
    .to('.intro-text-bold', { delay: 10 })
    //.from(".intro-text",  { y: innerHeight * 1.5 })
 
-}, 1);
+}, 10000);
 
 
 StyleElements();
