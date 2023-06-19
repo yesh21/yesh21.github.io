@@ -27,7 +27,10 @@ window.onload = function() {
   setTimeout(function () {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
-}, 1);
+}, 10000);
+
+
+
 setTimeout(function () {
  //     ScrollTrigger.refresh()
  ScrollTrigger.refresh()
@@ -41,9 +44,9 @@ setTimeout(function () {
           scrub: 1,
           //markers: true,
           pin: ".qwer",
-          ease: "elastic(2.5, 1)",
+          //ease: "elastic(2.5, 1)",
           start: "top top",
-          end: "+=500%"
+          end: "+=300%"
         }
       })
       
@@ -51,15 +54,16 @@ setTimeout(function () {
       
         tl1
         //.to('.qwer', { scale: 10,  ease: "power1.inOut"})
-        .to('.center', { opacity: 0,  ease: "power1.inOut"})
+        //.to('.center', { opacity: 0,  ease: "power1.inOut"})
         //.from('#trigger1', {drawSVG:'0 0', ease:'none'}, 0)
-        .to('path#word', 0.9, {strokeDashoffset: 0, ease:Linear.easeNone	})
-        .to('path#word1', 0.4, {strokeDashoffset: 0, ease:Linear.easeNone	})
-        .to('path#word2', 0.4, {strokeDashoffset: 0, ease:Linear.easeNone	})
-        .to('path#word3',  0.4,{strokeDashoffset: 0, ease:Linear.easeNone	})
-        .to('path#word4',  0.4,{strokeDashoffset: 0, ease:Linear.easeNone	})
-        .to('path#word5',  0.4,{strokeDashoffset: 0, ease:Linear.easeNone	})
-        .to('path#dot',  0.1,{strokeDashoffset: 0, fill: "#fff", ease:Linear.easeNone	})
+        .to('path#word', {strokeDashoffset: 0	,  ease: "power1.inOut"})
+        .to('path#word1', {strokeDashoffset: 0 ,  ease: "power1.inOut"})
+        .to('path#word2',  {strokeDashoffset: 0	,  ease: "power1.inOut"})
+        .to('path#word3',  {strokeDashoffset: 0	,  ease: "power1.inOut"})
+        .to('path#word4', {strokeDashoffset: 0	,  ease: "power1.inOut"})
+        .to('path#word5', {strokeDashoffset: 0	,  ease: "power1.inOut"})
+        .to('path#dot', {strokeDashoffset: 0, fill: "#fff",  ease: "power1.inOut"})
+        .to('.center', { opacity: 0,  ease: "power1.inOut"})
         //normalizeScroll
         //.to('#bbig', { height: "100vh", width: "100vw", ease: "power1.inOut"})
 
@@ -82,14 +86,14 @@ setTimeout(function () {
   tl
   //.to('.center', { opacity: 0 })
   .from('.aboutme', { xPercent:-100, duration: 5, ease:'power2.out' })
-   .to('.intro-text-bold', { opacity: 0.1, duration: 10})
+   .to('.intro-text-bold', { opacity: 0.1, duration: 10, ease:'power2.out'})
    //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
    .to('.intro-text', {fontSize: "10vmax", duration: 10}) //color: "darkcyan",
-   .to('.intro-text-bold', { delay: 10 })
+   .to('.intro-text-bold', {  delay:10, ease:'power2.out' })
    //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
    //.from(".intro-text",  { y: innerHeight * 1.5 })
 
-}, 1);
+}, 10000);
 
 
 StyleElements();
