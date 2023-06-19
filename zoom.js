@@ -27,7 +27,7 @@ window.onload = function() {
   setTimeout(function () {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
-}, 10000);
+}, 1);
 setTimeout(function () {
  //     ScrollTrigger.refresh()
  ScrollTrigger.refresh()
@@ -52,7 +52,14 @@ setTimeout(function () {
         tl1
         //.to('.qwer', { scale: 10,  ease: "power1.inOut"})
         .to('.center', { opacity: 0,  ease: "power1.inOut"})
-        .to('#trigger1', {containerAnimation: tween	})
+        //.from('#trigger1', {drawSVG:'0 0', ease:'none'}, 0)
+        .to('path#word', 0.9, {strokeDashoffset: 0, ease:Linear.easeNone	})
+        .to('path#word1', 0.4, {strokeDashoffset: 0, ease:Linear.easeNone	})
+        .to('path#word2', 0.4, {strokeDashoffset: 0, ease:Linear.easeNone	})
+        .to('path#word3',  0.4,{strokeDashoffset: 0, ease:Linear.easeNone	})
+        .to('path#word4',  0.4,{strokeDashoffset: 0, ease:Linear.easeNone	})
+        .to('path#word5',  0.4,{strokeDashoffset: 0, ease:Linear.easeNone	})
+        .to('path#dot',  0.1,{strokeDashoffset: 0, fill: "#fff", ease:Linear.easeNone	})
         //normalizeScroll
         //.to('#bbig', { height: "100vh", width: "100vw", ease: "power1.inOut"})
 
@@ -82,7 +89,7 @@ setTimeout(function () {
    //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
    //.from(".intro-text",  { y: innerHeight * 1.5 })
 
-}, 10000);
+}, 1);
 
 
 StyleElements();
