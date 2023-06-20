@@ -10,3 +10,16 @@ menuOpen.addEventListener("click", () => {
 menuClose.addEventListener("click", () => {
     overlay.classList.remove("overlay--active");
 });
+
+
+const contOpen = document.getElementById("mobile__contactOpen");
+const contClose = document.getElementById("mobile__contactClose");
+const contoverlay = document.getElementById("mobile__contact");
+
+contOpen.addEventListener("click", () => {
+    contoverlay.classList.add("overlay--active");
+});
+
+contClose.addEventListener("click", () => {
+    contoverlay.classList.remove("overlay--active");
+});
