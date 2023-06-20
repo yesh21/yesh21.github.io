@@ -13,13 +13,17 @@ function StyleElements() {
     
     //let diff = window.innerWidth - window.innerHeight;
     
-    if(window.innerWidth > 600){
+    if(window.innerWidth > 700){
         //document.getElementById("bbig").style.scale = 1+(diff/1200);
         document.body.style.overflowX = 'hidden';
-        document.querySelector(".color_chg-btn").style.right = '1px';
+        //document.querySelector(".color_chg-btn").style.right = '1px';
+        document.querySelector(".color_chg-btn").style.scale = '1';
+        document.querySelector(".color_chg-btn").style.padding = '6%';
     } else {
-        document.body.style.overflowX = 'visible'; // remember
-        document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
+        //document.body.style.overflowX = 'visible'; // remember
+        document.querySelector(".color_chg-btn").style.scale = '.7';
+        document.querySelector(".color_chg-btn").style.padding = '0%';
+        //document.querySelector(".color_chg-btn").style.right = (window.innerWidth-600)*100/window.innerWidth + '%' ;
     }
 }
 
