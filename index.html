@@ -79,6 +79,10 @@
         background: wheat;
         animation: mymove 6s;
         width: 100%;
+        height: 100vh;
+  position: fixed;
+  /* prevent overscroll bounce*/
+  overflow-y: scroll;
 }
 
 @keyframes mymove {
@@ -191,6 +195,10 @@
                 pointer-events: none; margin: 0; padding: 0;
 }
 
+strong {
+    color: indianred;
+}
+
 </style>
 
 <body>
@@ -204,7 +212,7 @@
             <br>&nbsp&nbsp&nbsp&nbsp&nbsp  load          : loads the program
             <br>&nbsp&nbsp&nbsp&nbsp&nbsp  run           : runs the website.
             <br><br></p>
-            <p class="command" style="animation-delay: 3500ms;"><strong>&nbspYesh21@linux:/Documents</strong>$load MyWebsite</p>
+            <p class="command" style="animation-delay: 3500ms;"><strong>&nbspYesh21@linux:/Documents~</strong>$load MyWebsite</p>
             <p class="command" style="animation-delay: 5000ms;">&nbsp+  && run()<br><br> <span class="cursorDash">                                    _   _       
                 <br>
                  _                 _ _             <br>
@@ -216,7 +224,7 @@
                 &nbsp Loading CSS...<br></p>
             <p class="command" style="animation-delay: 5700ms;">&nbsp Loading images...</p>
             <p class="command"style="animation-delay: 5900ms;">&nbsp Loading assets...</span><span class="cursorDash">_</span></p>
-            <p class="command" style="animation-delay: 5900ms;animation-duration: 6000ms;"><strong>&nbsp [#############################################]</strong></p>
+            <p class="command" style="animation-delay: 5900ms;animation-duration: 6000ms;"><strong>&nbsp [#####################################]</strong></p>
         </div>
     </div>
 
