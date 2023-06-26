@@ -304,6 +304,8 @@ function draw() {
     }
   }
   fps = 1000 / (Date.now() - time);
+  discs[1].x_vel +=50;
+  discs[1].y_vel += 100;
 
   //fps is lower when the tab is not focused, leading to all sorts of strange results. If unfocused, do nothing.
   if (fps > 10) {
@@ -316,6 +318,8 @@ function draw() {
 
   ctx.fillStyle = "rgb(0,0,0)";
   //ctx.lineWidth = 1;
+  discs[1].x_vel -=50;
+  discs[1].y_vel -= 100;
 
   for (i = 0; i < discs.length; i++) {
     ctx.beginPath();

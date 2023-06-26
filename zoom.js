@@ -48,7 +48,7 @@ setTimeout(function () {
           scrub: 1,
           //markers: true,
           pin: ".qwer",
-          //ease: "elastic(2.5, 1)",
+          ease: "sine.easeOut",
           start: "top top",
           end: "+=300%"
         }
@@ -80,7 +80,7 @@ setTimeout(function () {
     scrub: 1,
     //markers: true,
     pin: "#clipe",
-    ease: "elastic(2.5, 1)",
+    ease: "sine.easeOut",
     start: "top top",
     end: "+=500%"
   }
@@ -114,7 +114,7 @@ const tl2 = gsap.timeline( {
   scrub: 1,
   //markers: true,
   pin: "#clipe1",
-  ease: "elastic(2.5, 1)",
+  ease: "sine.easeOut",
   start: "top top",
   end: "+=500%"
 }
