@@ -153,9 +153,10 @@
     width: 90%;
     background: none;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 6px solid;
     color: mediumaquamarine;
-    font-size: 4vmin;
+    font-size: 6.5104166667vmax;
+         max-width: 56vmax;
     font-weight: 600;
     outline: none;
     transition: border-color .2s;
@@ -186,8 +187,6 @@
 
 .contactText {
     font-size: 6.5104166667vmax;
-                /* letter-spacing: 1.555em; */
-                color: ghostwhite;
                 pointer-events: none; margin: 0; padding: 0;
 }
 
@@ -431,22 +430,17 @@ strong {
         <svg width="100%" height="80" viewBox="0 0 500 80" preserveAspectRatio="none">
             <path d="M 0 80 L 0 40 Q 250 0 500 40 L 500 80 Z" fill="white" stroke="white" />
         </svg>
-        <div style="background: white ; position: relative;padding: 10vmin 0;        display: flex;">
-
-            <h2 id = "mobile__contactOpen" style="    padding: 4vmin 28vmin 0 0;
-            max-width: 0%;
-            font-size: 7vmin;
-            transform: rotate(270deg);">Let's work together</h2>
-            <div class="outer-container" style="background: white;
-            margin-right: 5.5vb; 
-            margin-bottom: 5.5vb;">
-                  <div>
-                    
-                    <input class="app-form-control" style="padding: 3vmin 0;"placeholder="NAME" value="Yaswanth Pulavarthi">
-                    <input class="app-form-control" style="padding: 3vmin 0;"placeholder="EMAIL">
-                    <input class="app-form-control" style="padding: 6vmin 0;" placeholder="MESSAGE">
-      
-          </div>
+        <div style="height: 100vh;background: white;">
+            <canvas style="position: absolute;" width="980" height="1918" id="canvas_1"></canvas>
+            <div class="overlay__content" style="max-width: 800px;
+            margin: auto;">
+                <h2 class = "contactText">Hello </h2>
+                <h2 class = "contactText">My name is </h2>
+                <span><input class="app-form-control" placeholder="your name"></span>
+                 <h2 class = "contactText">Here's my email </h2>
+                 <span><input class="app-form-control" placeholder="your email"></span>
+                  <h2 class = "contactText">Let's discuss </h2>
+                  <span><input class="app-form-control" placeholder="leave a message"></span>
             </div>
         </div>
     </div>
@@ -475,11 +469,13 @@ strong {
     <script src="mobile.js"></script>
     <script src="zoom.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
+    <script type="text/javascript" src="collision.js"></script>
 
     <script>
         document.getElementById("color_change").onclick = function() {
-            const colours = ["sandybrown", "seagreen", "skyblue", "turquoise", "thistle", "blueviolet", "aqua", "lightgreen", "lightpink",
-             "aquamarine", "darkgoldenrod", "darkturquoise", "thistle", "yellowgreen", "violet", "darkorange", "darkkhaki"];
+            const colours = ["sandybrown", "skyblue", "turquoise", "thistle", "lightgreen", "lightpink", "darksalmon",
+             "aquamarine", "lavenderblush", "darkturquoise", "thistle", "violet", "darkkhaki", "goldenrod"];
             
             document.body.style.background = colours[Math.floor(Math.random()*colours.length)];
         };
