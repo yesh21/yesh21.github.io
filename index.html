@@ -150,6 +150,7 @@
 .cursor__ball:hover ~ .codingText { filter: url(#liquify); }
 
 .app-form-control {
+    pointer-events: fill;
     width: 90%;
     background: none;
     border: none;
@@ -188,6 +189,7 @@
 .contactText {
     font-size: 5vb;
                 pointer-events: none; margin: 0; padding: 0;
+                color: white;
 }
 
 strong {
@@ -379,13 +381,13 @@ strong {
             transform: skewY(-5deg);
             color: ghostwhite;
             pointer-events: none; margin: 0; padding: 0% 5%;">
-                <span class ="intro-text-bold r1">“ I use</span> 
-                <span class ="intro-text-bold r2"> coding as</span>
-                <span class ="intro-text-bold r3"> tool to repair</span>
-                <span class ="intro-text-bold r4"> and create</span> 
-                <span class ="intro-text it1">Magical</span>
-                <span class ="intro-text-bold r5"> things.</span>
-                <span class ="intro-text-bold r6"> I am interested in </span>
+                <span class ="intro-text-bold r1">“ I use </span> 
+                <span class ="intro-text-bold r2">coding as </span>
+                <span class ="intro-text-bold r3">tool to repair </span>
+                <span class ="intro-text-bold r4">and create </span> 
+                <span class ="intro-text it1">Magical </span>
+                <span class ="intro-text-bold r5">things. </span>
+                <span class ="intro-text-bold r6">I am interested in </span>
             <span class ="intro-text it1">AI stuff.</span> </h2>
          </div>  
          
@@ -432,7 +434,7 @@ strong {
         </svg>
         <div style="height: 100vh;background: white;">
             <canvas style="position: absolute; width: 100vw; height: 100vh;" id="canvas_1"></canvas>
-            <div class="overlay__content" style="max-width: 800px;
+            <div class="overlay__content" style="max-width: 800px;pointer-events: none;    mix-blend-mode: difference; position: absolute;
             margin: auto;">
                 <h2 class = "contactText">Hello </h2>
                 <h2 class = "contactText">My name is </h2>
