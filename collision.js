@@ -145,7 +145,9 @@ function mouse_up(event){
   active_node = -1;
 }
 
-
+function createDiscs(){
+  discs =[];
+  var discCount = 13;
 for (i = 0; i < discCount; i++) {
 
   var r = Math.max(10, max_radius - i*2);
@@ -159,7 +161,8 @@ for (i = 0; i < discCount; i++) {
   };
   discs.push(disc);
 }
-
+}
+createDiscs();
 var n_x = walls.map(function(i) {
   return -(i.y_1 - i.y_0) / length(i.x_1 - i.x_0, i.y_1 - i.y_0);
 });
@@ -169,6 +172,7 @@ var n_y = walls.map(function(i) {
 
 
 function move() {
+  var count = 0;
   for (i = 0; i < discCount; i++) {
     if (discs[i].x < discs[i].radius) {
       discs[i].x = discs[i].radius;
@@ -190,8 +194,25 @@ function move() {
       discs[i].x += discs[i].x_vel;
       discs[i].y += discs[i].y_vel;
     }
+
+    if (discs[i].x > canvas_1.width -(canvas_1.height/5) && discs[i].y > canvas_1.height -(canvas_1.height/5)) {
+      //discs[i].radius = 0;
+      if(count==0){
+      count++;
+      discs[i].x_vel = (canvas_1.width - discs[i].x-canvas_1.height/10)/10;
+      discs[i].y_vel = (canvas_1.height - discs[i].y-canvas_1.height/10)/10;
+      if(Math.round(discs[i].x) == Math.round(canvas_1.width-(canvas_1.height/10)) && Math.round(discs[i].y) == Math.round(canvas_1.height - canvas_1.height/10)){
+        console.log( discs.splice(i, 1) );
+        discCount--;
+    }
+    } else{
+      discs[i].x_vel = -(canvas_1.width - discs[i].x)/10;
+      discs[i].y_vel = -(canvas_1.height - discs[i].y)/10;
+    }
+    }
   }
 }
+
 
 
 function dist(dx, dy){
@@ -304,8 +325,6 @@ function draw() {
     }
   }
   fps = 1000 / (Date.now() - time);
-  discs[1].x_vel +=50;
-  discs[1].y_vel += 100;
 
   //fps is lower when the tab is not focused, leading to all sorts of strange results. If unfocused, do nothing.
   if (fps > 10) {
@@ -316,11 +335,18 @@ function draw() {
     move();
   }
 
+  ctx.fillStyle = "rgb(133,133,133)";
+  ctx.arc(canvas_1.width-canvas_1.height/10, canvas_1.height-canvas_1.height/10, 1.41*canvas_1.height/10, 0, TWO_PI);
+  ctx.fill();
+
+  if(discCount == 2){
+    discCount = 13;
+    createDiscs();
+  }
+
   ctx.fillStyle = "rgb(0,0,0)";
   //ctx.lineWidth = 1;
-  discs[1].x_vel -=50;
-  discs[1].y_vel -= 100;
-
+  
   for (i = 0; i < discs.length; i++) {
     ctx.beginPath();
     ctx.arc(discs[i].x, discs[i].y, discs[i].radius, 0, TWO_PI);
