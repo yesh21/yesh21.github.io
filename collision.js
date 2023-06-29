@@ -335,7 +335,7 @@ function draw() {
     move();
   }
 
-  ctx.fillStyle = "rgb(133,133,133)";
+  ctx.fillStyle = "rgb(220, 20, 60)";
   ctx.arc(canvas_1.width-canvas_1.height/10, canvas_1.height-canvas_1.height/10, 1.41*canvas_1.height/10, 0, TWO_PI);
   ctx.fill();
 
