@@ -90,15 +90,15 @@ setTimeout(function () {
 
   tl
   //.to('.center', { opacity: 0 })
-  .from('#clipe', { xPercent:-100, duration: 5 })
+  .from('#clipe', { xPercent:-100, duration: 5,  ease:  'SlowMo.ease.config( 0.5,  0.4, false)' })
    //.to('.intro-text-bold', { opacity: 0.1, duration: 10, ease:'power2.out'})
-   .to('.q5', { opacity: 0.1, duration: 5})
-   .to('.q1', { opacity: 0.4, duration: 5})
-   .to('.q2', { opacity: 0.3, duration: 5})
-   .to('.q4', { opacity: 0.5, duration: 5})
-   .to('.q3', { opacity: 0.2, duration: 5})
-   .to('.q7', { opacity: 0.2, duration: 5})
-   .to('.q6', { opacity: 0.7, duration: 5})
+   .to('.q5', { opacity: 0.1, duration: 5, ease:'power2.out'})
+   .to('.q1', { opacity: 0.4, duration: 5, ease:'power2.out'})
+   .to('.q2', { opacity: 0.3, duration: 5, ease:'power2.out'})
+   .to('.q4', { opacity: 0.5, duration: 5, ease:'power2.out'})
+   .to('.q3', { opacity: 0.2, duration: 5, ease:'power2.out'})
+   .to('.q7', { opacity: 0.2, duration: 5, ease:'power2.out'})
+   .to('.q6', { opacity: 0.7, duration: 5, ease:'power2.out'})
 
 
    //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
@@ -124,14 +124,14 @@ const tl2 = gsap.timeline( {
 
 tl2
 //.to('.center', { opacity: 0 })
-.from('#clipe1', { xPercent:-100, duration: 5 })
+.from('#clipe1', { xPercent:-100, duration: 5,  ease:  'SlowMo.ease.config( 0.5,  0.4, false)' })
  //.to('.intro-text-bold', { opacity: 0.1, duration: 10, ease:'power2.out'})
- .to('.r6', { opacity: 0.1, duration: 5})
- .to('.r1', { opacity: 0.4, duration: 5})
- .to('.r2', { opacity: 0.3, duration: 5})
- .to('.r4', { opacity: 0.5, duration: 5})
- .to('.r3', { opacity: 0.2, duration: 5})
- .to('.r5', { opacity: 0.2, duration: 5})
+ .to('.r6', { opacity: 0.1, duration: 5, ease:'power2.out'})
+ .to('.r1', { opacity: 0.4, duration: 5, ease:'power2.out'})
+ .to('.r2', { opacity: 0.3, duration: 5, ease:'power2.out'})
+ .to('.r4', { opacity: 0.5, duration: 5, ease:'power2.out'})
+ .to('.r3', { opacity: 0.2, duration: 5, ease:'power2.out'})
+ .to('.r5', { opacity: 0.2, duration: 5, ease:'power2.out'})
  //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
  .to('.it1', {fontSize: "10vmax", duration: 10, delay: 5}) //color: "darkcyan",
  //.to('.intro-text-bold', {  delay:10, ease:'power2.out' })
