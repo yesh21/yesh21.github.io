@@ -91,19 +91,19 @@ setTimeout(function () {
 
   tl
   //.to('.center', { opacity: 0 })
-  .from('#clipe', { xPercent:-100, duration: 5,  ease:  'SlowMo.ease.config( 0.5,  0.4, false)' })
+  .from('#clipe', { xPercent:-100, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)' })
    //.to('.intro-text-bold', { opacity: 0.1, duration: 10, ease:'power2.out'})
-   .to('.q5', { opacity: 0.1, duration: 5, ease:'power2.out'})
-   .to('.q1', { opacity: 0.4, duration: 5, ease:'power2.out'})
-   .to('.q2', { opacity: 0.3, duration: 5, ease:'power2.out'})
-   .to('.q4', { opacity: 0.5, duration: 5, ease:'power2.out'})
-   .to('.q3', { opacity: 0.2, duration: 5, ease:'power2.out'})
-   .to('.q7', { opacity: 0.2, duration: 5, ease:'power2.out'})
-   .to('.q6', { opacity: 0.7, duration: 5, ease:'power2.out'})
+   .to('.q5', { opacity: 0.1, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+   .to('.q1', { opacity: 0.4, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+   .to('.q2', { opacity: 0.3, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+   .to('.q4', { opacity: 0.5, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+   .to('.q3', { opacity: 0.2, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+   .to('.q7', { opacity: 0.2, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+   .to('.q6', { opacity: 0.7, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
 
 
    //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
-   .to('.it', {fontSize: "10vmax", duration: 10, delay: 5}) //color: "darkcyan",
+   .to('.it', {fontSize: "10vmax", duration: 10, delay: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'}) //color: "darkcyan",
    //.to('.intro-text-bold', {  delay:10, ease:'power2.out' })
    //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
    //.from(".intro-text",  { y: innerHeight * 1.5 })
@@ -125,16 +125,16 @@ const tl2 = gsap.timeline( {
 
 tl2
 //.to('.center', { opacity: 0 })
-.from('#clipe1', { xPercent:-100, duration: 5,  ease:  'SlowMo.ease.config( 0.5,  0.4, false)' })
+.from('#clipe1', { xPercent:-100, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)' })
  //.to('.intro-text-bold', { opacity: 0.1, duration: 10, ease:'power2.out'})
- .to('.r6', { opacity: 0.1, duration: 5, ease:'power2.out'})
- .to('.r1', { opacity: 0.4, duration: 5, ease:'power2.out'})
- .to('.r2', { opacity: 0.3, duration: 5, ease:'power2.out'})
- .to('.r4', { opacity: 0.5, duration: 5, ease:'power2.out'})
- .to('.r3', { opacity: 0.2, duration: 5, ease:'power2.out'})
- .to('.r5', { opacity: 0.2, duration: 5, ease:'power2.out'})
+ .to('.r6', { opacity: 0.1, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+ .to('.r1', { opacity: 0.4, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+ .to('.r2', { opacity: 0.3, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+ .to('.r4', { opacity: 0.5, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+ .to('.r3', { opacity: 0.2, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
+ .to('.r5', { opacity: 0.2, duration: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'})
  //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
- .to('.it1', {fontSize: "10vmax", duration: 10, delay: 5}) //color: "darkcyan",
+ .to('.it1', {fontSize: "10vmax", duration: 10, delay: 5,  ease:  'SlowMo.ease.config( 0.7,  0.7, false)'}) //color: "darkcyan",
  //.to('.intro-text-bold', {  delay:10, ease:'power2.out' })
  //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
  //.from(".intro-text",  { y: innerHeight * 1.5 })
