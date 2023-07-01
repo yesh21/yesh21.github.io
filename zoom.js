@@ -28,7 +28,7 @@ window.onload = function() {
 }, 10000);
 
 
-wh = window.innerHeight;
+var wh = window.innerHeight;
 setTimeout(function () {
  //     ScrollTrigger.refresh()
  ScrollTrigger.refresh()
@@ -44,7 +44,7 @@ setTimeout(function () {
           pin: ".qwer",
           ease: "sine.easeOut",
           start: "top top",
-          end: wh*3
+          end: "+=" + 3*wh
         }
       })
       
@@ -76,7 +76,7 @@ setTimeout(function () {
     pin: "#clipe",
     ease: "sine.easeOut",
     start: "top top",
-    end: 5*wh
+    end: "+=" +5*wh
   }
 })
 
@@ -110,7 +110,7 @@ const tl2 = gsap.timeline( {
   pin: "#clipe1",
   ease: "sine.easeOut",
   start: "top top",
-  end: wh*5
+  end: "+=" + 5*wh
 }
 })
 
