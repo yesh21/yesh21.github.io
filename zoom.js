@@ -44,7 +44,7 @@ setTimeout(function () {
           pin: ".qwer",
           ease: "sine.easeOut",
           start: "top top",
-          end: "+=" + 3*wh
+          end: "+=" + 4*wh
         }
       })
       
@@ -76,7 +76,7 @@ setTimeout(function () {
     pin: "#clipe",
     ease: "sine.easeOut",
     start: "top top",
-    end: "+=" +5*wh
+    end: "+=" +7*wh
   }
 })
 
@@ -110,7 +110,7 @@ const tl2 = gsap.timeline( {
   pin: "#clipe1",
   ease: "sine.easeOut",
   start: "top top",
-  end: "+=" + 5*wh
+  end: "+=" + 7*wh
 }
 })
 
