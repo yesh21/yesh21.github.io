@@ -1,10 +1,3 @@
-
-$(document).ready(function(){
-  $(this).scrollTop(0);
-});
-
-
-
 function StyleElements() {
     //document.querySelector(".zoom").style.height = Math.max(600, window.innerHeight) +'px';
     //document.getElementById("img-fit").style.height = Math.max(600, window.innerHeight) +'px';
@@ -35,7 +28,7 @@ window.onload = function() {
 }, 10000);
 
 
-
+wh = window.innerHeight;
 setTimeout(function () {
  //     ScrollTrigger.refresh()
  ScrollTrigger.refresh()
@@ -51,7 +44,7 @@ setTimeout(function () {
           pin: ".qwer",
           ease: "sine.easeOut",
           start: "top top",
-          end: "+=300%"
+          end: wh*3
         }
       })
       
@@ -83,7 +76,7 @@ setTimeout(function () {
     pin: "#clipe",
     ease: "sine.easeOut",
     start: "top top",
-    end: "+=500%"
+    end: 5*wh
   }
 })
 
@@ -117,7 +110,7 @@ const tl2 = gsap.timeline( {
   pin: "#clipe1",
   ease: "sine.easeOut",
   start: "top top",
-  end: "+=500%"
+  end: wh*5
 }
 })
 
