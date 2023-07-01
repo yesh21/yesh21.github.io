@@ -415,17 +415,8 @@ strong {
 
 
         <div style="height: 100vh;background: white;">
-            <canvas style="position: absolute; width: 100vw; height: 100vh;" id="canvas_1"></canvas>
-            <div class="overlay__content" style="max-width: 800px;pointer-events: none;    mix-blend-mode: difference; position: absolute;
-            margin: auto;">
-                <h2 class = "contactText">Hello </h2>
-                <h2 class = "contactText">My name is </h2>
-                <span><input class="app-form-control" placeholder="your name"></span>
-                 <h2 class = "contactText">Here's my email </h2>
-                 <span><input class="app-form-control" placeholder="your email"></span>
-                  <h2 class = "contactText">Let's discuss </h2>
-                  <span><input class="app-form-control" placeholder="about..."></span>
-            </div>
+            <canvas style="position: absolute; width: 100vw; height: 100vh;    mix-blend-mode: difference;" id="scene"></canvas>
+
         </div>
     </div>
 
@@ -452,9 +443,12 @@ strong {
 
     <script src="mobile.js"></script>
     <script src="zoom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+
+
+<script src="astr.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
-    <script type="text/javascript" src="collision.js"></script>
+
 
     <script>
         document.getElementById("color_change").onclick = function() {

@@ -31,7 +31,7 @@ window.onload = function() {
   setTimeout(function () {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
-    draw();
+    //draw();
 }, 10000);
 
 
