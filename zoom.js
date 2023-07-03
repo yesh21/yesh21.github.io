@@ -129,7 +129,7 @@ setTimeout(function () {
 
 
    //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
-   .to('.it', {fontSize: "10vmax", duration: 10, delay: 5,  ease:  'power3.easeInOut'}) //color: "darkcyan",
+   .to('.it', {fontSize: "10vmax", duration: 10, ease:  'power3.easeInOut'}) //color: "darkcyan",
    //.to('.intro-text-bold', {  delay:30, ease:'power2.out' })
    //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
    //.from(".intro-text",  { y: innerHeight * 1.5 })
@@ -160,7 +160,7 @@ tl2
  .to('.r3', { opacity: 0.2, duration: 5,  ease:  'power3.easeInOut'})
  .to('.r5', { opacity: 0.2, duration: 5,  ease:  'power3.easeInOut'})
  //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
- .to('.it1', {fontSize: "10vmax", duration: 10, delay: 5,  ease:  'power3.easeInOut'}) //color: "darkcyan",
+ .to('.it1', {fontSize: "10vmax", duration: 10, ease:  'power3.easeInOut'}) //color: "darkcyan",
  //.to('.intro-text-bold', {  delay:30, ease:'power2.out' })
  //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
  //.from(".intro-text",  { y: innerHeight * 1.5 })
