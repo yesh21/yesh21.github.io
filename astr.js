@@ -1,29 +1,37 @@
 
 var ww = window.innerWidth,
-	wh = window.innerHeight;
+	wh = 2*window.innerHeight;
 
 function init(){
-	renderer = new THREE.WebGLRenderer({canvas : document.getElementById('scene'),antialias: true});
+	renderer = new THREE.WebGLRenderer({canvas : document.getElementById('scene'),antialias: true, alpha: true});
 	renderer.setSize(ww,wh);
-  //renderer.setClearColor( 0xffffff, 1 );
+  renderer.setClearColor( 0xffffff, 0 );
 	scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2( 0xefd1b5, 0.0005 );
+  scene.fog = new THREE.FogExp2( 0xefd1b5, 0.00005 );
 	camera = new THREE.PerspectiveCamera(50, ww/wh, 5, 10000);
 	camera.position.set(0, 0, 1.2*wh);
 	scene.add(camera);
   
- var light = new THREE.PointLight( 0xff7f24, 6, 1000 );
-light.position.set(ww/4, 0, wh/2 );
+ var light = new THREE.PointLight( 0xf17f24, 6, 1000 );
+light.position.set(ww/4, -wh/4, wh/4 );
 	scene.add(light);
   
    var light2 = new THREE.PointLight( 0x6495ed, 6, 1000 );
-light2.position.set(0, 0, 0 );
+light2.position.set(0, -wh/4, wh/8 );
 	scene.add(light2);
+
+  var light3 = new THREE.PointLight( 0x6495ed, 6, 2000 );
+  light3.position.set(0, wh/4, wh/8 );
+    scene.add(light3);
+
+    var light4 = new THREE.PointLight( 0x6495ed, 6, 1000 );
+  light4.position.set(0, wh/4, wh/4 );
+    scene.add(light4);
   
   var asteroids = createAsteroids();
   
   function update () {
-    if(document.getElementById('scene').getBoundingClientRect().top <= 2*wh){
+    if(document.getElementById('scene').getBoundingClientRect().top <= 3*wh){
     asteroids.forEach(function(obj){
           obj.rotation.x -= obj.r.x;
           obj.rotation.y -= obj.r.y;
@@ -46,12 +54,12 @@ function createAsteroids(){
   var maxWidth = 1000;
   var asteroids = [];
   for(var i=0;i<100;i++){
-    asteroids.push(createRock(wh/30,ww));
+    asteroids.push(createRock(wh/60));
   }
   return asteroids;
 }
 
-function createRock(size,spreadX){
+function createRock(size){
 	geometry = new THREE.DodecahedronGeometry(size, 1);
   geometry.vertices.forEach(function(v){
     v.x += (0-Math.random()*(size/4));
@@ -70,9 +78,9 @@ function createRock(size,spreadX){
   cube.castShadow = true;
   cube.receiveShadow = true;
   cube.scale.set(1+Math.random()*0.4,1+Math.random()*0.8,1+Math.random()*0.4);
-  var x = spreadX/2-Math.random()*spreadX;
-  var y = wh/2-(Math.random() * wh);
-  var z = wh/2-(Math.random() * wh);
+  var x = ww/2-Math.random()*ww;
+  var y = (wh/2-(Math.random() * wh))*.9;
+  var z = (Math.random() * wh)/4;
   cube.position.set(x,y,z)
   cube.r = {};
   cube.r.x = Math.random() * 0.005;
