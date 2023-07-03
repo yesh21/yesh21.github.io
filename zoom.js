@@ -25,6 +25,7 @@ window.onload = function() {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
     //draw();
+    init();
 }, 10000);
 
 
@@ -42,7 +43,7 @@ setTimeout(function () {
           scrub: 1,
           //markers: true,
           pin: ".qwer",
-          ease: "sine.easeOut",
+          ease: "power3.inOut",
           start: "top top",
           end: "+=" + 4*wh
         }
@@ -54,13 +55,13 @@ setTimeout(function () {
         //.to('.qwer', { scale: 10,  ease: "power1.inOut"})
         //.to('.center', { opacity: 0,  ease: "power1.inOut"})
         //.from('#trigger1', {drawSVG:'0 0', ease:'none'}, 0)
-        .to('path#word', {strokeDashoffset: 0,  ease:  'power3.inOut'})
-        .to('path#word1', {strokeDashoffset: 0,  ease:  'power3.inOut' })
-        .to('path#word2',  {strokeDashoffset: 0,  ease:  'power3.inOut'})
-        .to('path#word3',  {strokeDashoffset: 0,  ease:  'power3.inOut'})
-        .to('path#word4', {strokeDashoffset: 0,  ease: 'power3.inOut'})
-        .to('path#word5', {strokeDashoffset: 0,  ease:  'power3.inOut'})
-        .to('path#dot', {strokeDashoffset: 0, fill: "#fff",  ease:  'power3.inOut'})
+        .to('path#word', {strokeDashoffset: 0,  ease:  'power2.inOut'})
+        .to('path#word1', {strokeDashoffset: 0,  ease:  'power2.inOut' })
+        .to('path#word2',  {strokeDashoffset: 0,  ease:  'power2.inOut'})
+        .to('path#word3',  {strokeDashoffset: 0,  ease:  'power2.inOut'})
+        .to('path#word4', {strokeDashoffset: 0,  ease: 'power2.inOut'})
+        .to('path#word5', {strokeDashoffset: 0,  ease:  'power2.inOut'})
+        .to('path#dot', {strokeDashoffset: 0, fill: "#fff",  ease:  'power2.inOut'})
         .to('.center', { opacity: 0})
         //.to('.zoom', { filter: "url(#liquify)" ,ease: "power1.inOut"})
         //normalizeScroll
@@ -74,7 +75,7 @@ setTimeout(function () {
     scrub: 1,
     //markers: true,
     pin: "#clipe",
-    ease: "sine.easeOut",
+    ease: "power3.inOut",
     start: "top top",
     end: "+=" +7*wh
   }
@@ -108,7 +109,7 @@ const tl2 = gsap.timeline( {
   scrub: 1,
   //markers: true,
   pin: "#clipe1",
-  ease: "sine.easeOut",
+  ease: "power3.inOut",
   start: "top top",
   end: "+=" + 7*wh
 }

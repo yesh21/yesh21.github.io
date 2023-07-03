@@ -23,16 +23,19 @@ light2.position.set(0, 0, 0 );
   var asteroids = createAsteroids();
   
   function update () {
+    if(document.getElementById('scene').getBoundingClientRect().top <= 2*wh){
     asteroids.forEach(function(obj){
           obj.rotation.x -= obj.r.x;
           obj.rotation.y -= obj.r.y;
           obj.rotation.z -= obj.r.z;
     })
+
     //const timer = 0.001 * Date.now();
     //camera.lookAt(scene.position);
     //camera.position.x = Math.sin(timer /2 ) * -20;
     //camera.position.z = Math.cos(timer / 2) * 20;
-
+    //console.log("testing")
+  }
     renderer.render(scene, camera);
     requestAnimationFrame(update);
   }
@@ -79,5 +82,3 @@ function createRock(size,spreadX){
   return cube;
 };
 
-//Init our scene
-init();
