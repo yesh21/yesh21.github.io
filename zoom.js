@@ -75,7 +75,7 @@ setTimeout(function () {
           scrub: 1,
           //markers: true,
           pin: ".qwer",
-          ease: "power3.easeInOut",
+          ease: "slow",
           start: "top top",
           end: "+=" + 4*wh
         }
@@ -107,7 +107,7 @@ setTimeout(function () {
     scrub: 1,
     //markers: true,
     pin: "#clipe",
-    ease: "power3.easeInOut",
+    ease: "slow",
     start: "top top",
     end: "+=" +7*wh
   }
@@ -141,7 +141,7 @@ const tl2 = gsap.timeline( {
   scrub: 1,
   //markers: true,
   pin: "#clipe1",
-  ease: "power3.easeInOut",
+  ease: "slow",
   start: "top top",
   end: "+=" + 7*wh
 }
