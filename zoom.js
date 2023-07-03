@@ -1,3 +1,35 @@
+/*
+
+// Usual boilerplate scroll-wheel incompatibility plaster.
+
+var div = document.body;
+div.addEventListener("DOMMouseScroll", grabScroll, { passive: false });
+div.addEventListener("mousewheel", grabScroll, { passive: false });
+
+function grabScroll(e) {
+  var dy = -(e.wheelDeltaY || e.wheelDelta || 0);
+  if (e.detail != null) {
+    if (e.axis == e.HORIZONTAL_AXIS) dx = e.detail;
+    else if (e.axis == e.VERTICAL_AXIS) dy = e.detail;
+  }
+  if (dy > 0) {
+    //console.log(dy)
+    if(dy > 50){
+    div.scrollTop += wh/15;
+    } else {
+      div.scrollTop += dy;
+    }
+  } else {
+    if(dy < -50){
+      div.scrollTop += -wh/15;
+      } else {
+        div.scrollTop += dy;
+      }
+  }
+
+  if (dx || dy) { e.preventDefault(); e.stopPropagation(); }
+}
+*/
 function StyleElements() {
     //document.querySelector(".zoom").style.height = Math.max(600, window.innerHeight) +'px';
     //document.getElementById("img-fit").style.height = Math.max(600, window.innerHeight) +'px';
@@ -98,7 +130,7 @@ setTimeout(function () {
 
    //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
    .to('.it', {fontSize: "10vmax", duration: 10, delay: 5,  ease:  'power3.easeInOut'}) //color: "darkcyan",
-   .to('.intro-text-bold', {  delay:30, ease:'power2.out' })
+   //.to('.intro-text-bold', {  delay:30, ease:'power2.out' })
    //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
    //.from(".intro-text",  { y: innerHeight * 1.5 })
 
@@ -129,7 +161,7 @@ tl2
  .to('.r5', { opacity: 0.2, duration: 5,  ease:  'power3.easeInOut'})
  //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
  .to('.it1', {fontSize: "10vmax", duration: 10, delay: 5,  ease:  'power3.easeInOut'}) //color: "darkcyan",
- .to('.intro-text-bold', {  delay:30, ease:'power2.out' })
+ //.to('.intro-text-bold', {  delay:30, ease:'power2.out' })
  //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
  //.from(".intro-text",  { y: innerHeight * 1.5 })
 
