@@ -43,7 +43,7 @@ setTimeout(function () {
           scrub: 1,
           //markers: true,
           pin: ".qwer",
-          ease: "power3.inOut",
+          ease: "power3.easeInOut",
           start: "top top",
           end: "+=" + 4*wh
         }
@@ -55,13 +55,13 @@ setTimeout(function () {
         //.to('.qwer', { scale: 10,  ease: "power1.inOut"})
         //.to('.center', { opacity: 0,  ease: "power1.inOut"})
         //.from('#trigger1', {drawSVG:'0 0', ease:'none'}, 0)
-        .to('path#word', {strokeDashoffset: 0,  ease:  'power2.inOut'})
-        .to('path#word1', {strokeDashoffset: 0,  ease:  'power2.inOut' })
-        .to('path#word2',  {strokeDashoffset: 0,  ease:  'power2.inOut'})
-        .to('path#word3',  {strokeDashoffset: 0,  ease:  'power2.inOut'})
-        .to('path#word4', {strokeDashoffset: 0,  ease: 'power2.inOut'})
-        .to('path#word5', {strokeDashoffset: 0,  ease:  'power2.inOut'})
-        .to('path#dot', {strokeDashoffset: 0, fill: "#fff",  ease:  'power2.inOut'})
+        .to('path#word', {strokeDashoffset: 0,  ease:  'power2.easeInOut'})
+        .to('path#word1', {strokeDashoffset: 0,  ease:  'power2.easeInOut' })
+        .to('path#word2',  {strokeDashoffset: 0,  ease:  'power2.easeInOut'})
+        .to('path#word3',  {strokeDashoffset: 0,  ease:  'power2.easeInOut'})
+        .to('path#word4', {strokeDashoffset: 0,  ease: 'power2.easeInOut'})
+        .to('path#word5', {strokeDashoffset: 0,  ease:  'power2.easeInOut'})
+        .to('path#dot', {strokeDashoffset: 0, fill: "#fff",  ease:  'power2.easeInOut'})
         .to('.center', { opacity: 0})
         //.to('.zoom', { filter: "url(#liquify)" ,ease: "power1.inOut"})
         //normalizeScroll
@@ -75,7 +75,7 @@ setTimeout(function () {
     scrub: 1,
     //markers: true,
     pin: "#clipe",
-    ease: "power3.inOut",
+    ease: "power3.easeInOut",
     start: "top top",
     end: "+=" +7*wh
   }
@@ -85,19 +85,19 @@ setTimeout(function () {
 
   tl
   //.to('.center', { opacity: 0 })
-  .from('#clipe', { xPercent:-100, duration: 5,  ease:  'power3.inOut' })
+  .from('#clipe', { xPercent:-100, duration: 5,  ease:  'power3.easeInOut' })
    //.to('.intro-text-bold', { opacity: 0.1, duration: 10, ease:'power2.out'})
-   .to('.q5', { opacity: 0.1, duration: 5,  ease:  'power3.inOut'})
-   .to('.q1', { opacity: 0.4, duration: 5,  ease:  'power3.inOut'})
-   .to('.q2', { opacity: 0.3, duration: 5,  ease:  'power3.inOut'})
-   .to('.q4', { opacity: 0.5, duration: 5,  ease:  'power3.inOut'})
-   .to('.q3', { opacity: 0.2, duration: 5,  ease:  'power3.inOut'})
-   .to('.q7', { opacity: 0.2, duration: 5,  ease:  'power3.inOut'})
-   .to('.q6', { opacity: 0.7, duration: 5,  ease:  'power3.inOut'})
+   .to('.q5', { opacity: 0.1, duration: 5,  ease:  'power3.easeInOut'})
+   .to('.q1', { opacity: 0.4, duration: 5,  ease:  'power3.easeInOut'})
+   .to('.q2', { opacity: 0.3, duration: 5,  ease:  'power3.easeInOut'})
+   .to('.q4', { opacity: 0.5, duration: 5,  ease:  'power3.easeInOut'})
+   .to('.q3', { opacity: 0.2, duration: 5,  ease:  'power3.easeInOut'})
+   .to('.q7', { opacity: 0.2, duration: 5,  ease:  'power3.easeInOut'})
+   .to('.q6', { opacity: 0.7, duration: 5,  ease:  'power3.easeInOut'})
 
 
    //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
-   .to('.it', {fontSize: "10vmax", duration: 10, delay: 5,  ease:  'power3.inOut'}) //color: "darkcyan",
+   .to('.it', {fontSize: "10vmax", duration: 10, delay: 5,  ease:  'power3.easeInOut'}) //color: "darkcyan",
    //.to('.intro-text-bold', {  delay:10, ease:'power2.out' })
    //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
    //.from(".intro-text",  { y: innerHeight * 1.5 })
@@ -109,7 +109,7 @@ const tl2 = gsap.timeline( {
   scrub: 1,
   //markers: true,
   pin: "#clipe1",
-  ease: "power3.inOut",
+  ease: "power3.easeInOut",
   start: "top top",
   end: "+=" + 7*wh
 }
@@ -119,16 +119,16 @@ const tl2 = gsap.timeline( {
 
 tl2
 //.to('.center', { opacity: 0 })
-.from('#clipe1', { xPercent:-100, duration: 5,  ease:  'power3.inOut' })
+.from('#clipe1', { xPercent:-100, duration: 5,  ease:  'power3.easeInOut' })
  //.to('.intro-text-bold', { opacity: 0.1, duration: 10, ease:'power2.out'})
- .to('.r6', { opacity: 0.1, duration: 5,  ease:  'power3.inOut'})
- .to('.r1', { opacity: 0.4, duration: 5,  ease:  'power3.inOut'})
- .to('.r2', { opacity: 0.3, duration: 5,  ease:  'power3.inOut'})
- .to('.r4', { opacity: 0.5, duration: 5,  ease:  'power3.inOut'})
- .to('.r3', { opacity: 0.2, duration: 5,  ease:  'power3.inOut'})
- .to('.r5', { opacity: 0.2, duration: 5,  ease:  'power3.inOut'})
+ .to('.r6', { opacity: 0.1, duration: 5,  ease:  'power3.easeInOut'})
+ .to('.r1', { opacity: 0.4, duration: 5,  ease:  'power3.easeInOut'})
+ .to('.r2', { opacity: 0.3, duration: 5,  ease:  'power3.easeInOut'})
+ .to('.r4', { opacity: 0.5, duration: 5,  ease:  'power3.easeInOut'})
+ .to('.r3', { opacity: 0.2, duration: 5,  ease:  'power3.easeInOut'})
+ .to('.r5', { opacity: 0.2, duration: 5,  ease:  'power3.easeInOut'})
  //.from(".intro-text-bold",  { y: innerHeight * 1.5 })
- .to('.it1', {fontSize: "10vmax", duration: 10, delay: 5,  ease:  'power3.inOut'}) //color: "darkcyan",
+ .to('.it1', {fontSize: "10vmax", duration: 10, delay: 5,  ease:  'power3.easeInOut'}) //color: "darkcyan",
  //.to('.intro-text-bold', {  delay:10, ease:'power2.out' })
  //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
  //.from(".intro-text",  { y: innerHeight * 1.5 })
