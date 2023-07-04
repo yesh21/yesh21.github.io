@@ -100,7 +100,10 @@ function createRock(size){
   cube.receiveShadow = true;
   //cube.scale.set(1+Math.random()*0.4,1+Math.random()*0.8,1+Math.random()*0.4);
   var x = ww/2-Math.random()*ww;
-  var y = (wh/2-(Math.random() * wh))*.9;
+  var y = (wh/2-(Math.random() * wh));
+  if(y>0){
+    y = y*.7;
+  }
   var z = (Math.random() * wh)/4;
   cube.position.set(x,y,z)
 	scene.add(cube);
