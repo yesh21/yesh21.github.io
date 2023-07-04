@@ -46,7 +46,14 @@ light2.position.set(0, -wh/4, wh/8 );
   //var asteroids1 = createAsteroids();
 
   var wdhid = ww/2+wh/45;
+  var now,delta,then = Date.now();
+var interval = 1000/30;
+
   function update () {
+    now = Date.now();
+    delta = now - then;
+    //update time dependent animations here at 30 fps
+    if (delta > interval) {
     if(document.getElementById('scene').getBoundingClientRect().top <= 3*wh){
 
     asteroids.forEach(function(p){
@@ -61,10 +68,11 @@ light2.position.set(0, -wh/4, wh/8 );
     })
 
 
-    mesh.rotation.x -= 0.01;
     mesh.rotation.y -= 0.01;
     mesh.rotation.z -= 0.01;
   }
+  then = now - (delta % interval);
+}
     renderer.render(scene, camera);
     requestAnimationFrame(update);
   }
