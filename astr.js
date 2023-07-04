@@ -27,11 +27,14 @@ light2.position.set(0, -wh/4, wh/8 );
     var light4 = new THREE.PointLight( 0x6495ed, 6, 1000 );
   light4.position.set(0, wh/4, wh/4 );
     scene.add(light4);
-    const geometry = new THREE.SphereGeometry(ww/4, 32, 32);
+    const geometry = new THREE.SphereGeometry(wh/15, 32, 32);
     const material = new THREE.MeshPhongMaterial({ map: THREE.ImageUtils.loadTexture('https://yesh21.github.io/form1.png',THREE.SphericalRefractionMapping)});
     const mesh = new THREE.Mesh(geometry, material);
-    mesh.position.set(0, -wh/4, 0 );
+    mesh.position.set(-wh/28, -wh/5, wh/2 );
     scene.add(mesh);
+    var light5 = new THREE.PointLight( 0x6495ed, 6, wh/2 );
+    light5.position.set(-wh/28, -wh/5, wh/1.5 );
+      scene.add(light5);
   var asteroids = createAsteroids();
   
   function update () {
@@ -41,7 +44,9 @@ light2.position.set(0, -wh/4, wh/8 );
           obj.rotation.y -= obj.r.y;
           obj.rotation.z -= obj.r.z;
     })
-
+    mesh.rotation.x -= 0.005;
+    mesh.rotation.y -= 0.005;
+    mesh.rotation.z -= 0.005;
     //const timer = 0.001 * Date.now();
     //camera.lookAt(scene.position);
     //camera.position.x = Math.sin(timer /2 ) * -20;
