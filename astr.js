@@ -30,10 +30,10 @@ light2.position.set(0, -wh/4, wh/8 );
     const geometry = new THREE.SphereGeometry(wh/15, 32, 32);
     const material = new THREE.MeshPhongMaterial({ map: THREE.ImageUtils.loadTexture('https://yesh21.github.io/form1.png',THREE.SphericalRefractionMapping)});
     const mesh = new THREE.Mesh(geometry, material);
-    mesh.position.set(-wh/28, -wh/5, wh/2 );
+    mesh.position.set(-ww/4, -wh/5, wh/2 );
     scene.add(mesh);
     var light5 = new THREE.PointLight( 0x6495ed, 6, wh/2 );
-    light5.position.set(-wh/28, -wh/5, wh/1.5 );
+    light5.position.set(-ww/6, -wh/5, wh/1.5 );
       scene.add(light5);
   var asteroids = createAsteroids();
   

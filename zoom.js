@@ -57,6 +57,7 @@ window.onload = function() {
     document.getElementById("preloader").remove();
     document.getElementById("myDiv").style.display = "block";
     //draw();
+    document.body.style.background = "wheat";
     init();
 }, 1);
 
