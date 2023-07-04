@@ -27,7 +27,11 @@ light2.position.set(0, -wh/4, wh/8 );
     var light4 = new THREE.PointLight( 0x6495ed, 6, 1000 );
   light4.position.set(0, wh/4, wh/4 );
     scene.add(light4);
-  
+    const geometry = new THREE.SphereGeometry(ww/4, 32, 32);
+    const material = new THREE.MeshPhongMaterial({ map: THREE.ImageUtils.loadTexture('https://yesh21.github.io/form1.png',THREE.SphericalRefractionMapping)});
+    const mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(0, -wh/4, 0 );
+    scene.add(mesh);
   var asteroids = createAsteroids();
   
   function update () {
@@ -54,7 +58,8 @@ function createAsteroids(){
   var maxWidth = 1000;
   var asteroids = [];
   for(var i=0;i<100;i++){
-    asteroids.push(createRock(wh/60));
+    wmax = Math.max(wh, ww);
+    asteroids.push(createRock(wmax/50));
   }
   return asteroids;
 }
@@ -77,7 +82,7 @@ function createRock(size){
 	cube = new THREE.Mesh(geometry, texture);
   cube.castShadow = true;
   cube.receiveShadow = true;
-  cube.scale.set(1+Math.random()*0.4,1+Math.random()*0.8,1+Math.random()*0.4);
+  //cube.scale.set(1+Math.random()*0.4,1+Math.random()*0.8,1+Math.random()*0.4);
   var x = ww/2-Math.random()*ww;
   var y = (wh/2-(Math.random() * wh))*.9;
   var z = (Math.random() * wh)/4;
