@@ -27,31 +27,43 @@ light2.position.set(0, -wh/4, wh/8 );
     var light4 = new THREE.PointLight( 0x6495ed, 6, 1000 );
   light4.position.set(0, wh/4, wh/4 );
     scene.add(light4);
+
     const geometry = new THREE.SphereGeometry(wh/15, 32, 32);
-    const material = new THREE.MeshPhongMaterial({ map: THREE.ImageUtils.loadTexture('https://yesh21.github.io/form1.png',THREE.SphericalRefractionMapping)});
+    const material = new THREE.MeshPhongMaterial({
+      //reflectivity: 0.5,
+      shininess: 10,
+      map: THREE.ImageUtils.loadTexture('https://yesh21.github.io/form1.png',THREE.SphericalRefractionMapping)});
+
     const mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(-ww/4, -wh/5, wh/2 );
     scene.add(mesh);
+
     var light5 = new THREE.PointLight( 0x6495ed, 6, wh/2 );
-    light5.position.set(-ww/6, -wh/5, wh/1.5 );
+    light5.position.set(-ww/7, -wh/5, wh/1.5 );
       scene.add(light5);
+
   var asteroids = createAsteroids();
-  
+  //var asteroids1 = createAsteroids();
+
+  var wdhid = ww/2+wh/45;
   function update () {
     if(document.getElementById('scene').getBoundingClientRect().top <= 3*wh){
-    asteroids.forEach(function(obj){
-          obj.rotation.x -= obj.r.x;
-          obj.rotation.y -= obj.r.y;
-          obj.rotation.z -= obj.r.z;
+
+    asteroids.forEach(function(p){
+      p.rotation.z += 0.01;
+      p.position.x += 5;
+      p.position.z += 3;
+      
+      if (p.position.x > wdhid) {
+        p.position.x = -wdhid;
+        p.position.z = (Math.random() * wh/4);
+      }
     })
-    mesh.rotation.x -= 0.005;
-    mesh.rotation.y -= 0.005;
-    mesh.rotation.z -= 0.005;
-    //const timer = 0.001 * Date.now();
-    //camera.lookAt(scene.position);
-    //camera.position.x = Math.sin(timer /2 ) * -20;
-    //camera.position.z = Math.cos(timer / 2) * 20;
-    //console.log("testing")
+
+
+    mesh.rotation.x -= 0.01;
+    mesh.rotation.y -= 0.01;
+    mesh.rotation.z -= 0.01;
   }
     renderer.render(scene, camera);
     requestAnimationFrame(update);
@@ -60,7 +72,6 @@ light2.position.set(0, -wh/4, wh/8 );
 };
 
 function createAsteroids(){
-  var maxWidth = 1000;
   var asteroids = [];
   for(var i=0;i<100;i++){
     wmax = Math.max(wh, ww);
@@ -92,10 +103,6 @@ function createRock(size){
   var y = (wh/2-(Math.random() * wh))*.9;
   var z = (Math.random() * wh)/4;
   cube.position.set(x,y,z)
-  cube.r = {};
-  cube.r.x = Math.random() * 0.005;
-  cube.r.y = Math.random() * 0.005;
-  cube.r.z = Math.random() * 0.005;
 	scene.add(cube);
   return cube;
 };
