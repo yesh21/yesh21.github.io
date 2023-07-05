@@ -12,21 +12,17 @@ function init(){
 	camera.position.set(0, 0, 1.2*wh);
 	scene.add(camera);
   
- var light = new THREE.PointLight( 0xf17f24, 6, 1000 );
-light.position.set(ww/4, -wh/4, wh/4 );
+ var light = new THREE.PointLight( 0xf17f24, 6, 3000 );
+light.position.set(0, -Math.min(wh/2,ww), Math.min(wh/2,ww)/2 );
 	scene.add(light);
   
    var light2 = new THREE.PointLight( 0x6495ed, 6, 1000 );
 light2.position.set(0, -wh/4, wh/8 );
 	scene.add(light2);
 
-  var light3 = new THREE.PointLight( 0x6495ed, 6, 2000 );
-  light3.position.set(0, wh/4, wh/8 );
+  var light3 = new THREE.PointLight( 0xf17f24, 6, 1000 );
+  light3.position.set(ww/4, -wh/4, wh/4 );
     scene.add(light3);
-
-    var light4 = new THREE.PointLight( 0x6495ed, 6, 1000 );
-  light4.position.set(0, wh/4, wh/4 );
-    scene.add(light4);
 
     const geometry = new THREE.SphereGeometry(wh/15, 32, 32);
     const material = new THREE.MeshPhongMaterial({
@@ -38,6 +34,17 @@ light2.position.set(0, -wh/4, wh/8 );
     mesh.position.set(-ww/4, -wh/5, wh/2 );
     scene.add(mesh);
 
+    const geometry1 = new THREE.SphereGeometry(Math.min(wh/2,ww)*.59, 32, 32);
+    const material1 = new THREE.MeshPhongMaterial({
+      //reflectivity: 0.5,
+      shininess: 10,
+      map: THREE.ImageUtils.loadTexture('https://yesh21.github.io/moon.png',THREE.SphericalRefractionMapping)});
+
+    const mesh1 = new THREE.Mesh(geometry1, material1);
+    mesh1.position.set(0, 0, -Math.min(wh/4,ww/2) );
+    scene.add(mesh1);
+
+    mesh1.rotation.y = -.5;
     var light5 = new THREE.PointLight( 0x6495ed, 6, wh/2 );
     light5.position.set(-ww/7, -wh/5, wh/1.5 );
       scene.add(light5);
@@ -81,7 +88,7 @@ var interval = 1000/30;
 
 function createAsteroids(){
   var asteroids = [];
-  for(var i=0;i<100;i++){
+  for(var i=0;i<80;i++){
     wmax = Math.max(wh, ww);
     asteroids.push(createRock(wmax/50));
   }
