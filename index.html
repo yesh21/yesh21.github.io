@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="textbyscroll.css">
     <link rel="stylesheet" href="terminal.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+    <script src="jquery_min.js"></script>
+    <script src="gsap_min.js"></script>
+    <script src="ScrollTrigger_min.js"></script>
 </head>
 
 <style>
@@ -434,17 +434,14 @@ strong {
 
     <script src="mobile.js"></script>
     <script src="zoom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
-
-
-<script src="astr.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+    <script src="three_min.js"></script>
+    <script src="astr.js"></script>
 
 
     <script>
         document.getElementById("color_change").onclick = function() {
             const colours = ["sandybrown", "skyblue", "turquoise", "thistle", "lightgreen", "lightpink", "darksalmon",
-             "aquamarine", "lavenderblush", "darkturquoise", "thistle", "violet", "darkkhaki", "goldenrod"];
+             "aquamarine", "lavenderblush", "thistle", "darkkhaki"];
             
             document.body.style.background = colours[Math.floor(Math.random()*colours.length)];
         };
@@ -454,15 +451,10 @@ strong {
 <script id="rendered-js">
     
     const $bigBall = document.querySelector('.cursor__ball--big');
-    
-
     // Listeners
     document.body.addEventListener('mousemove', onMouseMove);
-
-
     function onMouseMove(e) {
-
-    TweenMax.to($bigBall, .4, {
+    gsap.to($bigBall, .4, {
         x: e.pageX,
         y: e.pageY
     });
