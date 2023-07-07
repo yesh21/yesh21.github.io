@@ -439,12 +439,13 @@ strong {
 
 
     <script>
-        document.getElementById("color_change").onclick = function() {
+        function bodyBack() {
             const colours = ["sandybrown", "skyblue", "turquoise", "thistle", "lightgreen", "lightpink", "darksalmon",
              "aquamarine", "lavenderblush", "thistle", "darkkhaki"];
             
             document.body.style.background = colours[Math.floor(Math.random()*colours.length)];
-        };
+        }
+        document.getElementById("color_change").onclick = function() {bodyBack();}
     </script>
 
     

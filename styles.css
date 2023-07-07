@@ -109,7 +109,7 @@ footer {
 
 .overlay .close {
     position: absolute;
-    right: 10vw;
+    right: 30px;
     font-size: 8vw;
     color: #edf0f1;
     cursor: pointer;
