@@ -118,7 +118,7 @@ setTimeout(function () {
 
   tl
   //.to('.center', { opacity: 0 })
-  .from('#clipe', {onStart: bodyBack, xPercent:-100, duration: 5,  ease:  'power3.easeInOut' })
+  .from('#clipe', {xPercent:-100, duration: 5,  ease:  'power3.easeInOut' })
    //.to('.intro-text-bold', { opacity: 0.1, duration: 10, ease:'power2.out'})
    .to('.q5', { opacity: 0.1, duration: 5,  ease:  'power3.easeInOut'})
    .to('.q1', { opacity: 0.4, duration: 5,  ease:  'power3.easeInOut'})
@@ -152,7 +152,7 @@ const tl2 = gsap.timeline( {
 
 tl2
 //.to('.center', { opacity: 0 })
-.from('#clipe1', {onStart: bodyBack, xPercent:-100, duration: 5,  ease:  'power3.easeInOut' })
+.from('#clipe1', {xPercent:-100, duration: 5,  ease:  'power3.easeInOut' })
  //.to('.intro-text-bold', { opacity: 0.1, duration: 10, ease:'power2.out'})
  .to('.r6', { opacity: 0.1, duration: 5,  ease:  'power3.easeInOut'})
  .to('.r1', { opacity: 0.4, duration: 5,  ease:  'power3.easeInOut'})
