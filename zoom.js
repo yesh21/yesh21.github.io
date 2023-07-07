@@ -38,7 +38,7 @@ function StyleElements() {
     
     //let diff = window.innerWidth - window.innerHeight;
     
-    if(window.innerWidth > 700){
+    if(window.innerWidth > 750){
         //document.getElementById("bbig").style.scale = 1+(diff/1200);
         //document.body.style.overflowX = 'hidden';
         //document.querySelector(".color_chg-btn").style.right = '1px';
