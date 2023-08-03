@@ -42,7 +42,7 @@ function StyleElements() {
         //document.getElementById("bbig").style.scale = 1+(diff/1200);
         //document.body.style.overflowX = 'hidden';
         //document.querySelector(".color_chg-btn").style.right = '1px';
-        document.querySelector(".color_chg-btn").style.scale = '1';
+        document.querySelector(".color_chg-btn").style.scale = '.8';
         document.querySelector(".color_chg-btn").style.padding = '6%';
     } else {
         //document.body.style.overflowX = 'visible'; // remember
