@@ -16,12 +16,28 @@
     font-family: monospace;
     white-space: nowrap;
     animation: writeText;
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+
+    
+}
+.command-animation-2000 {
+    color: white;
+    display: block;
+    width: 0px;
+    max-width: 100%;
+    margin: 0;
+    font-size:4vmin;
+    overflow: hidden;
+    font-family: monospace;
+    white-space: nowrap;
+    animation: writeText;
     animation-duration: 2000ms;
     animation-fill-mode: forwards;
     
 }
 .cursorDash {
-    animation: blink 1s 6.5s infinite;
+    animation: blink 1s 3s infinite;
 }
 
 

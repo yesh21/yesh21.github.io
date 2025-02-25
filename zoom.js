@@ -59,7 +59,7 @@ window.onload = function() {
     //draw();
     document.body.style.background = "wheat";
     init();
-}, 10000);
+}, 4000);
 
 
 var wh = window.innerHeight;
@@ -166,7 +166,7 @@ tl2
  //.from('.aboutme', { xPercent:100, duration: 5, ease:'power2.out' })
  //.from(".intro-text",  { y: innerHeight * 1.5 })
 
-}, 10000);
+}, 4000);
 
 
 StyleElements();
