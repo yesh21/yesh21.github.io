@@ -54,8 +54,8 @@ function StyleElements() {
 
 window.onload = function() {
   setTimeout(function () {
-    document.getElementById("preloader").remove();
-    document.getElementById("myDiv").style.display = "block";
+    document.getElementById("preloaderyesh").remove();
+    document.getElementById("yeshDiv").style.display = "block";
     //draw();
     document.body.style.background = "wheat";
     init();
